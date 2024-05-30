@@ -10,7 +10,9 @@ The project includes the next libraries and tools:
 * CORS for Node.js
 * Dotenv
 
-## Preview of the land page:
-<img src="https://i.imgur.com/x9ZVUmy.png" alt="img_1" width="240" height="180" border="10" />
+> **Note:** To install the project just write **npm install**.
 
-For any question please contact me on my linkedin page.
+## Preview of the land page:
+<img src="https://i.imgur.com/x9ZVUmy.png"  alt="img_1"  width="100%"  height="550"  border="10" />
+
+For any question please contact me on my ([Linkedin](https://www.linkedin.com/in/david-ivan-san/)) page.
