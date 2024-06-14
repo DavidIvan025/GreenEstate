@@ -1,0 +1,16 @@
+/* Importing custom styles */
+@import 'base/_variables.css';
+@import 'base/_fonts.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+    font-size: 16px;
+}
+body{
+    font-family: "Montserrat", sans-serif;
+    color: var(--black);
+    background: var(--white);
+}
