@@ -1,16 +1,57 @@
-/* Importing custom styles */
-@import 'base/_variables.css';
-@import 'base/_fonts.css';
+@import 'tailwind.css';
+/* Custom Global CSS Styles */
+@import 'globalCSS/_variables.css';
+@import 'globalCSS/_fonts.css';
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Layout Styles */
+@import 'main/layout/Header.css';
+@import 'main/layout/Footer.css';
 
-html{
+/* Page Styles */
+@import 'main/pages/Home.css';
+
+html {
     font-size: 16px;
 }
-body{
+
+body {
     font-family: "Montserrat", sans-serif;
     color: var(--black);
     background: var(--white);
+}
+
+h1 {
+    font-size: var(--fs-h1);
+    line-height: var(--lh-100);
+}
+
+h2 {
+    font-size: var(--fs-h2);
+    line-height: var(--lh-100);
+}
+
+h3 {
+    font-size: var(--fs-h3);
+    line-height: var(--lh-100);
+}
+
+h4 {
+    font-size: var(--fs-h4);
+    line-height: var(--lh-200);
+}
+
+h5 {
+    font-size: var(--fs-h5);
+    line-height: var(--lh-200);
+}
+
+h6 {
+    font-size: var(--fs-h6);
+    line-height: var(--lh-200);
+}
+
+.glb-Wrapper {
+    padding: 0 5%;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
