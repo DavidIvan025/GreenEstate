@@ -1,10 +1,10 @@
 @layer base {
     :root {
-        --primary: hsl(143, 90%, 28%);
-        --primary-light: hsl(143, 50%, 76%);
-        --black: hsl(137, 13%, 11%);
-        --gray: hsl(0, 0%, 96%);
-        --white: hsl(0, 0%, 100%);
+        --primary: hsl(143deg, 90%, 28%);
+        --primary-light: hsl(143deg, 50%, 76%);
+        --black: hsl(137deg, 13%, 11%);
+        --gray: hsl(0deg, 0%, 96%);
+        --white: hsl(0deg, 0%, 100%);
 
         --fs-h1: 2.5rem;
         --fs-h2: 2rem;
