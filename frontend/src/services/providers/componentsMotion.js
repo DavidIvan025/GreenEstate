@@ -1,5 +1,5 @@
 // Renders props into parent components for easeOut type animations when it reaches the viewport
-export const componentsMotion = {
+export const containerMotion = {
     initial: { opacity: 0, y: 50 },
     whileInView: { opacity: 1, y: 0 },
     viewport: { once: true },

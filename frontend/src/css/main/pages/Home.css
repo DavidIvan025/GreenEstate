@@ -4,3 +4,24 @@
     background-position: center;
     background-blend-mode: overlay; 
 }
+
+.cc-Button{
+    display: inline-flex;
+    align-items: center;
+    margin-inline: .5rem;
+    justify-content: center;
+    stroke: var(--black);
+    cursor: pointer;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100%;
+    border-color: var(--gray);
+    border-width: 1px;
+    background-color: var(--white);
+}
+
+.cc-Button:hover{
+    background-color: var(--primary);
+    stroke: var(--white);
+    transition: background-color .9s ease;
+}
