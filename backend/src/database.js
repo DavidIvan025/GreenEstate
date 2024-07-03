@@ -1,13 +1,15 @@
 const mongoose = require('mongoose');
 
-const URI = process.env.MONGODB_URI
-    ? process.env.MONGODB_URI
-    : 'mongodb://127.0.0.1/datatest';
+const connectDB = async () => {
+    try {
+        const connect = await mongoose.connect(process.env.MONGODB_URI)
+        console.log(`MongoDB connected: ${connect.connection.host}`)
 
-mongoose.connect(URI)
+    } catch (err) {
+        console.log(err)
+        process.exit(1)
 
-const connection = mongoose.connection;
+    }
+}
 
-connection.once('open', () => {
-    console.log('DataBase is connected');
-})
+module.exports = connectDB;
