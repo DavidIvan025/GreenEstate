@@ -3,40 +3,33 @@ const {Schema, model} = require('mongoose');
 const memberSchema = new Schema({
     fullName: {
         type: String,
-        required: true,
-        trim: true,
-        unique: true
+        required: [true, 'name is required']
     },
     email: {
         type: String,
-        required: true,
-        trim: true,
+        required: [true, 'Email is required'],
         unique: true
     },
     password: {
         type: String,
-        required: false,
-        trim: true,
-        unique: false
+        required: [true, 'Password is required']
     },
     phoneNumber: {
         type: String,
-        required: false,
         trim: true,
-        unique: true
+        unique: true,
+        sparse: true
     },
     company: {
         type: String,
-        required: false,
         trim: true,
         unique: false
     },
     website: {
         type: String,
-        required: false,
         trim: true,
         unique: false
-    }
+    },
 }, {
     timestamps: true
 })
