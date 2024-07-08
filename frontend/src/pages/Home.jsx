@@ -6,7 +6,7 @@ import { containerMotion } from '../services/providers/componentsMotion'
 export default function Home() {
   return (
     <>
-      <main className='glb-Wrapper'>
+      <main className=''>
         <div className='hc-Background grid grid-cols-1 lg:grid-cols-2 items-center rounded-xl'>
           <motion.div
             className='flex flex-col space-y-6 md:pl-8 md:py-28'
@@ -30,7 +30,7 @@ export default function Home() {
         </div>
       </main>
 
-      <section className='glb-Wrapper'>
+      <section className=''>
         <h3 className='font-bold text-center'>Find Your Dream Home with Ease</h3>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-16'>
           <div className='flex flex-col space-y-5'>
@@ -52,7 +52,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='glb-Wrapper'>
+      <section className=''>
         <div className='flex flex-col space-y-6'>
           <span className='font-bold'>Luxury</span>
           <h2>Featured</h2>
@@ -115,7 +115,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='glb-Wrapper'>
+      <section className=''>
         <span>Our Services</span>
         <div>
           <h2>Explore the myriad ways we can be of assistance.</h2>
@@ -135,7 +135,7 @@ export default function Home() {
 
       </section>
 
-      <section className='glb-Wrapper'>
+      <section className=''>
         <div>
           <div>
             <img src='' alt='dicover_house' />
@@ -154,7 +154,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='glb-Wrapper'>
+      <section className=''>
         <h2>Customer Testimonials</h2>
         <p className='text-fs-md'>Read what our clients have to say about us</p>
 
@@ -173,7 +173,7 @@ export default function Home() {
 
       </section>
 
-      <section className='glb-Wrapper'>
+      <section className=''>
         <div>
           <div>
             <h2>Subscribe to our newsletter</h2>
@@ -194,7 +194,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='glb-Wrapper wrapper-Faq'>
+      <section className=' wrapper-Faq'>
         <h2>Frequently Asked Questions</h2>
         <p className='text-fs-md'>Find answers to commonly asked questions about real estate transactions and using our website.</p>
 
@@ -209,7 +209,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='glb-Wrapper'>
+      <section className=''>
         <h2>Read our latest articles</h2>
         <button>Browse all articles</button>
         <div className='article'>
@@ -226,7 +226,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='glb-Wrapper'>
+      <section className=''>
         <h2>Get in touch to schedule avisit to our open house</h2>
         <div>
           <div className='schedule'>

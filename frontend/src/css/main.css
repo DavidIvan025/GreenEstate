@@ -50,8 +50,44 @@ h6 {
     line-height: var(--lh-200);
 }
 
+.navList a {
+    cursor: pointer;
+
+}
 .glb-Wrapper {
-    min-width: 1024px;
+    min-width: 90%;
     padding: 0 5%;
     margin: 0 auto;
 }
+
+.loadingSpinnerContainer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0.9, 0, 0, 0);
+    z-index: 9000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .loadingSpinner {
+    width: 78px;
+    height: 78px;
+    border: 2px solid;
+    border-color: #000 transparent #999 transparent;
+    border-radius: 90%;
+    animation: spin 1.4s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(570deg);
+    }
+  }
