@@ -1,6 +1,11 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 /* Main Pages */
+import Header from './layout/Header'
 import Home from './pages/Home'
+import Login from './pages/Login'
+import Register from './pages/Register'
 import About from './pages/About'
 import Contact from './pages/Contact'
 import Product from './pages/Product'
@@ -14,11 +19,12 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        {/* <header /> */}
-        <div className="container">
+        <div className="glb-Wrapper">
+          <Header />
           <Routes>
-
             <Route path="/" index element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
             <Route exact path="/product/:productId" element={<Product />} />
             <Route path="/about" element={<About />} />
             <Route path="/blog" element={<Blog />} />
@@ -30,6 +36,7 @@ function App() {
         </div>
 
       </BrowserRouter>
+      <ToastContainer />
     </>
   )
 }
