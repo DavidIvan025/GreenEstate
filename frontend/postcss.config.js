@@ -1,18 +1,18 @@
 export default {
   plugins: {
-    'postcss-import': ({
-      path: ['src/css/**/*.css'],
-    }),
+    "postcss-import": {
+      path: ["src/css/**/*.css"],
+    },
     tailwindcss: {},
     autoprefixer: {},
     cssnano: {
-      preset: 'default',
+      preset: "default",
     },
-    'postcss-preset-env': {
+    "postcss-preset-env": {
       stage: 3,
       features: {
-        'custom-properties': false
-      }
-    }
+        "custom-properties": false,
+      },
+    },
   },
-}
+};

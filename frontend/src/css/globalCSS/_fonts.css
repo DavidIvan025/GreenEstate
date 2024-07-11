@@ -1,7 +1,7 @@
 @layer base {
-    @font-face {
-        font-family: Montserrat, sans-serif;
-        font-weight: 700;
-        src: url('../../public/fonts/Montserrat-Regular.ttf') format('ttf');
-    }
+  @font-face {
+    font-family: Montserrat, sans-serif;
+    font-weight: 700;
+    src: url("../../public/fonts/Montserrat-Regular.ttf") format("ttf");
+  }
 }

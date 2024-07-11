@@ -1,56 +1,97 @@
-@import 'tailwind.css';
+@import "tailwind.css";
 /* Custom Global CSS Styles */
-@import 'globalCSS/_variables.css';
-@import 'globalCSS/_fonts.css';
+@import "globalCSS/_variables.css";
+@import "globalCSS/_fonts.css";
 
 /* Layout Styles */
-@import 'main/layout/Header.css';
-@import 'main/layout/Footer.css';
+@import "main/layout/Header.css";
+@import "main/layout/Footer.css";
 
 /* Page Styles */
-@import 'main/pages/Home.css';
+@import "main/pages/Home.css";
 
 html {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 body {
-    font-family: "Montserrat", sans-serif;
-    color: var(--black);
-    background: var(--white);
+  font-family: "Montserrat", sans-serif;
+  color: var(--black);
+  background: var(--white);
 }
 
 h1 {
-    font-size: var(--fs-h1);
-    line-height: var(--lh-100);
+  font-size: var(--fs-h1);
+  line-height: var(--lh-100);
 }
 
 h2 {
-    font-size: var(--fs-h2);
-    line-height: var(--lh-100);
+  font-size: var(--fs-h2);
+  line-height: var(--lh-100);
 }
 
 h3 {
-    font-size: var(--fs-h3);
-    line-height: var(--lh-100);
+  font-size: var(--fs-h3);
+  line-height: var(--lh-100);
 }
 
 h4 {
-    font-size: var(--fs-h4);
-    line-height: var(--lh-200);
+  font-size: var(--fs-h4);
+  line-height: var(--lh-200);
 }
 
 h5 {
-    font-size: var(--fs-h5);
-    line-height: var(--lh-200);
+  font-size: var(--fs-h5);
+  line-height: var(--lh-200);
 }
 
 h6 {
-    font-size: var(--fs-h6);
-    line-height: var(--lh-200);
+  font-size: var(--fs-h6);
+  line-height: var(--lh-200);
 }
 
 .navList a {
+<<<<<<< HEAD
+  cursor: pointer;
+}
+.glb-Wrapper {
+  min-width: 90%;
+  padding: 0 5%;
+  margin: 0 auto;
+}
+
+.loadingSpinnerContainer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0.9, 0, 0, 0);
+  z-index: 9000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loadingSpinner {
+  width: 78px;
+  height: 78px;
+  border: 2px solid;
+  border-color: #000 transparent #999 transparent;
+  border-radius: 90%;
+  animation: spin 1.4s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(570deg);
+  }
+}
+=======
     cursor: pointer;
 
 }
@@ -91,3 +132,4 @@ h6 {
       transform: rotate(570deg);
     }
   }
+>>>>>>> 1c325eb56a95b56aca6e16e74e09b141bce11010
