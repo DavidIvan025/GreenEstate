@@ -1,19 +1,19 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { ToastContainer } from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css'
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 /* Main Pages */
-import Header from './layout/Header'
-import Home from './pages/Home'
-import Login from './pages/Login'
-import Register from './pages/Register'
-import About from './pages/About'
-import Contact from './pages/Contact'
-import Product from './pages/Product'
-import Blog from './pages/Blog'
+import Header from "./layout/Header";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Product from "./pages/Product";
+import Blog from "./pages/Blog";
 /* Utility Pages */
-import Demo from './pages/utility_pages/Demo'
-import Terms from './pages/utility_pages/TermsAndConditions'
-import Cookies from './pages/utility_pages/CookieSetting'
+import Demo from "./pages/utility_pages/Demo";
+import Terms from "./pages/utility_pages/TermsAndConditions";
+import Cookies from "./pages/utility_pages/CookieSetting";
 
 function App() {
   return (
@@ -34,11 +34,10 @@ function App() {
             <Route path="/cookies" element={<Cookies />} />
           </Routes>
         </div>
-
       </BrowserRouter>
       <ToastContainer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

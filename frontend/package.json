@@ -8,7 +8,8 @@
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "lint:css": "stylelint \"src/css/**/*.css\""
+    "lint:css": "stylelint \"src/css/**/*.css\"",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.6",
