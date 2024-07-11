@@ -6,8 +6,13 @@ import { containerMotion } from "../services/providers/componentsMotion";
 export default function Home() {
   return (
     <>
+<<<<<<< HEAD
       <main className="">
         <div className="hc-Background grid grid-cols-1 items-center rounded-xl lg:grid-cols-2">
+=======
+      <main className=''>
+        <div className='hc-Background grid grid-cols-1 lg:grid-cols-2 items-center rounded-xl'>
+>>>>>>> 1c325eb56a95b56aca6e16e74e09b141bce11010
           <motion.div
             className="flex flex-col space-y-6 md:py-28 md:pl-8"
             {...containerMotion}
@@ -48,6 +53,7 @@ export default function Home() {
         </div>
       </main>
 
+<<<<<<< HEAD
       <section className="">
         <h3 className="text-center font-bold">
           Find Your Dream Home with Ease
@@ -60,6 +66,13 @@ export default function Home() {
               width="35"
               height="35"
             />
+=======
+      <section className=''>
+        <h3 className='font-bold text-center'>Find Your Dream Home with Ease</h3>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-16'>
+          <div className='flex flex-col space-y-5'>
+            <img src='./images/house-svgrepo-com.svg' alt="explore_property" width="35" height="35" />
+>>>>>>> 1c325eb56a95b56aca6e16e74e09b141bce11010
             <h5>Explore Property Listings</h5>
             <p className="text-fs-base">
               Our user-friendly search functionality allows you to easily find
@@ -98,9 +111,15 @@ export default function Home() {
         </div>
       </section>
 
+<<<<<<< HEAD
       <section className="">
         <div className="flex flex-col space-y-6">
           <span className="font-bold">Luxury</span>
+=======
+      <section className=''>
+        <div className='flex flex-col space-y-6'>
+          <span className='font-bold'>Luxury</span>
+>>>>>>> 1c325eb56a95b56aca6e16e74e09b141bce11010
           <h2>Featured</h2>
           <div className="flex items-center">
             <p className="grow text-fs-md">
@@ -264,7 +283,11 @@ export default function Home() {
         </div>
       </section>
 
+<<<<<<< HEAD
       <section className="">
+=======
+      <section className=''>
+>>>>>>> 1c325eb56a95b56aca6e16e74e09b141bce11010
         <span>Our Services</span>
         <div>
           <h2>Explore the myriad ways we can be of assistance.</h2>
@@ -299,7 +322,11 @@ export default function Home() {
         </div>
       </section>
 
+<<<<<<< HEAD
       <section className="">
+=======
+      <section className=''>
+>>>>>>> 1c325eb56a95b56aca6e16e74e09b141bce11010
         <div>
           <div>
             <img src="" alt="dicover_house" />
@@ -338,7 +365,11 @@ export default function Home() {
         </div>
       </section>
 
+<<<<<<< HEAD
       <section className="">
+=======
+      <section className=''>
+>>>>>>> 1c325eb56a95b56aca6e16e74e09b141bce11010
         <h2>Customer Testimonials</h2>
         <p className="text-fs-md">Read what our clients have to say about us</p>
 
@@ -360,7 +391,11 @@ export default function Home() {
         </div>
       </section>
 
+<<<<<<< HEAD
       <section className="">
+=======
+      <section className=''>
+>>>>>>> 1c325eb56a95b56aca6e16e74e09b141bce11010
         <div>
           <div>
             <h2>Subscribe to our newsletter</h2>
@@ -397,7 +432,11 @@ export default function Home() {
         </div>
       </section>
 
+<<<<<<< HEAD
       <section className="wrapper-Faq">
+=======
+      <section className=' wrapper-Faq'>
+>>>>>>> 1c325eb56a95b56aca6e16e74e09b141bce11010
         <h2>Frequently Asked Questions</h2>
         <p className="text-fs-md">
           Find answers to commonly asked questions about real estate
@@ -423,7 +462,11 @@ export default function Home() {
         </div>
       </section>
 
+<<<<<<< HEAD
       <section className="">
+=======
+      <section className=''>
+>>>>>>> 1c325eb56a95b56aca6e16e74e09b141bce11010
         <h2>Read our latest articles</h2>
         <button>Browse all articles</button>
         <div className="article">
@@ -444,7 +487,11 @@ export default function Home() {
         </div>
       </section>
 
+<<<<<<< HEAD
       <section className="">
+=======
+      <section className=''>
+>>>>>>> 1c325eb56a95b56aca6e16e74e09b141bce11010
         <h2>Get in touch to schedule avisit to our open house</h2>
         <div>
           <div className="schedule">

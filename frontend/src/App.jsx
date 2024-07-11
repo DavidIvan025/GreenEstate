@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -10,6 +11,20 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Product from "./pages/Product";
 import Blog from "./pages/Blog";
+=======
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+/* Main Pages */
+import Header from './layout/Header'
+import Home from './pages/Home'
+import Login from './pages/Login'
+import Register from './pages/Register'
+import About from './pages/About'
+import Contact from './pages/Contact'
+import Product from './pages/Product'
+import Blog from './pages/Blog'
+>>>>>>> 1c325eb56a95b56aca6e16e74e09b141bce11010
 /* Utility Pages */
 import Demo from "./pages/utility_pages/Demo";
 import Terms from "./pages/utility_pages/TermsAndConditions";
