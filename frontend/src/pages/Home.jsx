@@ -6,19 +6,14 @@ import { containerMotion } from "../services/providers/componentsMotion";
 export default function Home() {
   return (
     <>
-<<<<<<< HEAD
-      <main className="">
+      <main>
         <div className="hc-Background grid grid-cols-1 items-center rounded-xl lg:grid-cols-2">
-=======
-      <main className=''>
-        <div className='hc-Background grid grid-cols-1 lg:grid-cols-2 items-center rounded-xl'>
->>>>>>> 1c325eb56a95b56aca6e16e74e09b141bce11010
           <motion.div
             className="flex flex-col space-y-6 md:py-28 md:pl-8"
             {...containerMotion}
           >
             <p className="text-fs-md">Welcome to Greenestates</p>
-            <h1 className="font-bold">Find Your Dream Home Today</h1>
+            <h1>Find Your Dream Home Today</h1>
             <p className="text-fs-md">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Suspendisse varius enim in eros elementum tristique.
@@ -53,8 +48,7 @@ export default function Home() {
         </div>
       </main>
 
-<<<<<<< HEAD
-      <section className="">
+      <section>
         <h3 className="text-center font-bold">
           Find Your Dream Home with Ease
         </h3>
@@ -66,13 +60,6 @@ export default function Home() {
               width="35"
               height="35"
             />
-=======
-      <section className=''>
-        <h3 className='font-bold text-center'>Find Your Dream Home with Ease</h3>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-16'>
-          <div className='flex flex-col space-y-5'>
-            <img src='./images/house-svgrepo-com.svg' alt="explore_property" width="35" height="35" />
->>>>>>> 1c325eb56a95b56aca6e16e74e09b141bce11010
             <h5>Explore Property Listings</h5>
             <p className="text-fs-base">
               Our user-friendly search functionality allows you to easily find
@@ -104,22 +91,13 @@ export default function Home() {
               Our user-friendly search functionality allows you to easily find
               properties that match your criteria.
             </p>
-            <Button intent="secondary" size="medium">
-              Primary button{" "}
-            </Button>
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-      <section className="">
+      <section>
         <div className="flex flex-col space-y-6">
           <span className="font-bold">Luxury</span>
-=======
-      <section className=''>
-        <div className='flex flex-col space-y-6'>
-          <span className='font-bold'>Luxury</span>
->>>>>>> 1c325eb56a95b56aca6e16e74e09b141bce11010
           <h2>Featured</h2>
           <div className="flex items-center">
             <p className="grow text-fs-md">
@@ -173,15 +151,15 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="featured-slider">
-          <div className="featured__card relative min-h-[450px] w-full">
+        <div className="featured-slider grid grid-flow-row grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+          <div className="featured__card relative min-h-[450px] w-full rounded-3xl border border-gray p-4 drop-shadow-sm">
             <img
-              className="aspect[1/2] absolute max-w-full rounded-3xl object-cover object-center"
+              className="aspect[1/2] max-w-full rounded-3xl object-cover object-center"
               src="images/img.jpg"
               alt="feature_1"
             />
             <div className="properties-img">
-              <div className="properties__button inline-flex gap-3 rounded-full bg-black p-2">
+              <div className="properties__button absolute left-6 top-6 inline-flex gap-3 rounded-full bg-black p-2">
                 <p className="text-fs-sm text-white">Recently Added</p>
                 <svg
                   className="h-5 w-5 stroke-white"
@@ -213,7 +191,7 @@ export default function Home() {
                 <p className="text-fs-sm text-white">1/5</p>
               </div>
               <svg
-                className="h-5 w-5 stroke-white"
+                className="absolute right-6 top-6 h-9 w-9 stroke-white"
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -237,57 +215,55 @@ export default function Home() {
               </svg>
             </div>
 
-            <div className="properties__location ml-2 flex">
-              <svg
-                className="h-5 w-5 stroke-gray"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-                <g
-                  id="SVGRepo_tracerCarrier"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                ></g>
-                <g id="SVGRepo_iconCarrier">
-                  <path
-                    d="M12 21C15.5 17.4 19 14.1764 19 10.2C19 6.22355 15.866 3 12 3C8.13401 3 5 6.22355 5 10.2C5 14.1764 8.5 17.4 12 21Z"
-                    strokeWidth="2"
+            <div className="ml-2 flex-col space-y-3">
+              <div className="properties__location mt-3 inline-flex">
+                <svg
+                  className="h-5 w-5 stroke-black"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                  ></path>
-                  <path
-                    d="M12 12C13.1046 12 14 11.1046 14 10C14 8.89543 13.1046 8 12 8C10.8954 8 10 8.89543 10 10C10 11.1046 10.8954 12 12 12Z"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  ></path>{" "}
-                </g>
-              </svg>
-              <span>Churchill Walk, London</span>
-            </div>
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M12 21C15.5 17.4 19 14.1764 19 10.2C19 6.22355 15.866 3 12 3C8.13401 3 5 6.22355 5 10.2C5 14.1764 8.5 17.4 12 21Z"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    ></path>
+                    <path
+                      d="M12 12C13.1046 12 14 11.1046 14 10C14 8.89543 13.1046 8 12 8C10.8954 8 10 8.89543 10 10C10 11.1046 10.8954 12 12 12Z"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    ></path>{" "}
+                  </g>
+                </svg>
+                <span>Churchill Walk, London</span>
+              </div>
 
-            <div className="properties__price ml-2 flex">
-              <span>
-                $ <Number>2500</Number>{" "}
-              </span>
-              <span>Offer Available</span>
-            </div>
+              <div className="properties__price">
+                <span>
+                  $ <Number>2500</Number>{" "}
+                </span>
+                <span>Offer Available</span>
+              </div>
 
-            <div className="properties__heading ml-2 flex">
-              <h3>3 bedroom detached house for sale</h3>
-              <p>2bed 1bath 818sqdr 5,619sqft lot</p>
+              <div className="properties__heading space-y-2">
+                <h6>3 bedroom detached house for sale</h6>
+                <p>2bed 1bath 818sqdr 5,619sqft lot</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-      <section className="">
-=======
-      <section className=''>
->>>>>>> 1c325eb56a95b56aca6e16e74e09b141bce11010
+      <section>
         <span>Our Services</span>
         <div>
           <h2>Explore the myriad ways we can be of assistance.</h2>
@@ -322,11 +298,7 @@ export default function Home() {
         </div>
       </section>
 
-<<<<<<< HEAD
-      <section className="">
-=======
-      <section className=''>
->>>>>>> 1c325eb56a95b56aca6e16e74e09b141bce11010
+      <section>
         <div>
           <div>
             <img src="" alt="dicover_house" />
@@ -365,11 +337,7 @@ export default function Home() {
         </div>
       </section>
 
-<<<<<<< HEAD
-      <section className="">
-=======
-      <section className=''>
->>>>>>> 1c325eb56a95b56aca6e16e74e09b141bce11010
+      <section>
         <h2>Customer Testimonials</h2>
         <p className="text-fs-md">Read what our clients have to say about us</p>
 
@@ -391,11 +359,7 @@ export default function Home() {
         </div>
       </section>
 
-<<<<<<< HEAD
-      <section className="">
-=======
-      <section className=''>
->>>>>>> 1c325eb56a95b56aca6e16e74e09b141bce11010
+      <section>
         <div>
           <div>
             <h2>Subscribe to our newsletter</h2>
@@ -432,11 +396,7 @@ export default function Home() {
         </div>
       </section>
 
-<<<<<<< HEAD
       <section className="wrapper-Faq">
-=======
-      <section className=' wrapper-Faq'>
->>>>>>> 1c325eb56a95b56aca6e16e74e09b141bce11010
         <h2>Frequently Asked Questions</h2>
         <p className="text-fs-md">
           Find answers to commonly asked questions about real estate
@@ -462,11 +422,7 @@ export default function Home() {
         </div>
       </section>
 
-<<<<<<< HEAD
-      <section className="">
-=======
-      <section className=''>
->>>>>>> 1c325eb56a95b56aca6e16e74e09b141bce11010
+      <section>
         <h2>Read our latest articles</h2>
         <button>Browse all articles</button>
         <div className="article">
@@ -487,11 +443,7 @@ export default function Home() {
         </div>
       </section>
 
-<<<<<<< HEAD
-      <section className="">
-=======
-      <section className=''>
->>>>>>> 1c325eb56a95b56aca6e16e74e09b141bce11010
+      <section>
         <h2>Get in touch to schedule avisit to our open house</h2>
         <div>
           <div className="schedule">
