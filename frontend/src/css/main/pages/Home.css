@@ -29,3 +29,8 @@
   stroke: var(--white);
   transition: background-color 0.9s ease;
 }
+
+.featured__card:hover {
+  transform: scale(1.02);
+  transition: transform .4s ease-in-out;
+}
