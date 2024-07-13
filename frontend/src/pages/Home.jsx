@@ -99,13 +99,13 @@ export default function Home() {
         <div className="flex flex-col space-y-6">
           <span className="font-bold">Luxury</span>
           <h2>Featured</h2>
-          <div className="flex items-center">
+          <div className="flex items-center pb-12">
             <p className="grow text-fs-md">
               Discover our curated selection of luxury properties.
             </p>
             <div className="cc-Button drop-shadow-sm">
               <svg
-                className="h-6 w-6 stroke-2"
+                className="size-6 stroke-2"
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -128,7 +128,7 @@ export default function Home() {
             </div>
             <div className="cc-Button drop-shadow-sm">
               <svg
-                className="h-6 w-6 stroke-2"
+                className="size-6 stroke-2"
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -152,7 +152,7 @@ export default function Home() {
           </div>
         </div>
         <div className="featured-slider grid grid-flow-row grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
-          <div className="featured__card relative min-h-[450px] w-full rounded-3xl border border-gray p-4 drop-shadow-sm">
+          <div className="featured__card relative min-h-[450px] w-full rounded-3xl border border-gray p-4 shadow-sm hover:shadow-lg">
             <img
               className="aspect[1/2] max-w-full rounded-3xl object-cover object-center"
               src="images/img.jpg"
@@ -162,7 +162,7 @@ export default function Home() {
               <div className="properties__button absolute left-6 top-6 inline-flex gap-3 rounded-full bg-black p-2">
                 <p className="text-fs-sm text-white">Recently Added</p>
                 <svg
-                  className="h-5 w-5 stroke-white"
+                  className="size-5 stroke-white"
                   viewBox="0 0 24 24"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -191,7 +191,7 @@ export default function Home() {
                 <p className="text-fs-sm text-white">1/5</p>
               </div>
               <svg
-                className="absolute right-6 top-6 h-9 w-9 stroke-white"
+                className="absolute right-6 top-6 size-9 stroke-white"
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -218,7 +218,7 @@ export default function Home() {
             <div className="ml-2 flex-col space-y-3">
               <div className="properties__location mt-3 inline-flex">
                 <svg
-                  className="h-5 w-5 stroke-black"
+                  className="size-5 stroke-black"
                   viewBox="0 0 24 24"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -241,7 +241,7 @@ export default function Home() {
                       strokeWidth="2"
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                    ></path>{" "}
+                    ></path>
                   </g>
                 </svg>
                 <span>Churchill Walk, London</span>
@@ -249,7 +249,7 @@ export default function Home() {
 
               <div className="properties__price">
                 <span>
-                  $ <Number>2500</Number>{" "}
+                  $ <Number>2500</Number>
                 </span>
                 <span>Offer Available</span>
               </div>
@@ -264,25 +264,28 @@ export default function Home() {
       </section>
 
       <section>
-        <span>Our Services</span>
-        <div>
-          <h2>Explore the myriad ways we can be of assistance.</h2>
-          <button>See more</button>
+        <span className="font-bold">Our Services</span>
+        <div className="flex items-center py-6">
+          <h2 className="font-bold">
+            Explore the myriad ways we can be of assistance.
+          </h2>
+          <Button>See more</Button>
         </div>
         <p>Discover our curated selection of luxury properties.</p>
 
-        <div className="services-list">
-          <div className="services__card">
+        <div className="services-list grid grid-flow-row grid-cols-1 gap-12 pt-12 md:grid-cols-2 lg:grid-cols-3">
+          <div className="services__card min-h-[450px] w-full space-y-6 border border-gray p-8 shadow-md hover:border-b-4 hover:border-b-primary hover:transition-all hover:ease-linear">
             <span className="text-fs-base">01</span>
-            <h4>Buy Properties</h4>
+            <h4 className="font-bold">Buy Properties</h4>
             <p className="text-fs-base">
               Discover a wide range of properties available for purchase. Our
               expert team will guide you through the buying process, ensuring a
               seamless experience from start to finish.
             </p>
-            <button>
-              Learn More{" "}
+            <button className="inline-flex pt-9">
+              Learn More
               <svg
+                className="ml-4 size-5"
                 xmlns="http://www.w3.org/2000/svg"
                 width="100%"
                 viewBox="0 0 24 24"
@@ -292,19 +295,23 @@ export default function Home() {
                   d="M5 12.9983H16.17L11.29 17.8783C10.9 18.2683 10.9 18.9083 11.29 19.2983C11.68 19.6883 12.31 19.6883 12.7 19.2983L19.29 12.7083C19.3827 12.6158 19.4563 12.5059 19.5064 12.3849C19.5566 12.2639 19.5824 12.1342 19.5824 12.0033C19.5824 11.8723 19.5566 11.7426 19.5064 11.6216C19.4563 11.5007 19.3827 11.3908 19.29 11.2983L12.71 4.69827C12.6174 4.60569 12.5075 4.53225 12.3865 4.48214C12.2656 4.43204 12.1359 4.40625 12.005 4.40625C11.8741 4.40625 11.7444 4.43204 11.6235 4.48214C11.5025 4.53225 11.3926 4.60569 11.3 4.69827C11.2074 4.79085 11.134 4.90076 11.0839 5.02173C11.0338 5.14269 11.008 5.27234 11.008 5.40327C11.008 5.5342 11.0338 5.66385 11.0839 5.78481C11.134 5.90578 11.2074 6.01569 11.3 6.10827L16.17 10.9983H5C4.45 10.9983 4 11.4483 4 11.9983C4 12.5483 4.45 12.9983 5 12.9983Z"
                   fill="currentColor"
                 ></path>
-              </svg>{" "}
+              </svg>
             </button>
           </div>
         </div>
       </section>
 
       <section>
-        <div>
-          <div>
-            <img src="" alt="dicover_house" />
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
+          <div className="hc-Background max-h-[450px] rounded-3xl p-6">
+            <img
+              className="size-full rounded-3xl object-cover"
+              src="./images/img.jpg"
+              alt="dicover_house"
+            />
           </div>
 
-          <div>
+          <div className="flex flex-col space-y-6 lg:p-4">
             <h3>Discover the Power of Our Proprietary Market Analysis Tool</h3>
             <p className="text-fs-md">
               Gain valuable insights and make informed decisions with our
@@ -312,48 +319,102 @@ export default function Home() {
               information to help you navigate the real estate market with
               confidence.
             </p>
-            <div>
-              <svg>
-                <path></path>
-              </svg>{" "}
+            <div className="inline-flex items-center">
+              <svg
+                className="mr-4 size-8"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  
+                  <rect width="24" height="24" fill="white"></rect>
+                  <path
+                    className="fill-primary"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M9.55879 3.6972C10.7552 2.02216 13.2447 2.02216 14.4412 3.6972L14.6317 3.96387C14.8422 4.25867 15.1958 4.41652 15.5558 4.37652L16.4048 4.28218C18.3156 4.06988 19.9301 5.68439 19.7178 7.59513L19.6235 8.44415C19.5835 8.8042 19.7413 9.15774 20.0361 9.36831L20.3028 9.55879C21.9778 10.7552 21.9778 13.2447 20.3028 14.4412L20.0361 14.6317C19.7413 14.8422 19.5835 15.1958 19.6235 15.5558L19.7178 16.4048C19.9301 18.3156 18.3156 19.9301 16.4048 19.7178L15.5558 19.6235C15.1958 19.5835 14.8422 19.7413 14.6317 20.0361L14.4412 20.3028C13.2447 21.9778 10.7553 21.9778 9.55879 20.3028L9.36831 20.0361C9.15774 19.7413 8.8042 19.5835 8.44414 19.6235L7.59513 19.7178C5.68439 19.9301 4.06988 18.3156 4.28218 16.4048L4.37652 15.5558C4.41652 15.1958 4.25867 14.8422 3.96387 14.6317L3.6972 14.4412C2.02216 13.2447 2.02216 10.7553 3.6972 9.55879L3.96387 9.36831C4.25867 9.15774 4.41652 8.8042 4.37652 8.44414L4.28218 7.59513C4.06988 5.68439 5.68439 4.06988 7.59513 4.28218L8.44415 4.37652C8.8042 4.41652 9.15774 4.25867 9.36831 3.96387L9.55879 3.6972ZM15.7071 9.29289C16.0976 9.68342 16.0976 10.3166 15.7071 10.7071L11.8882 14.526C11.3977 15.0166 10.6023 15.0166 10.1118 14.526L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929C8.68342 10.9024 9.31658 10.9024 9.70711 11.2929L11 12.5858L14.2929 9.29289C14.6834 8.90237 15.3166 8.90237 15.7071 9.29289Z"
+                    fill="#323232"
+                  ></path>
+                </g>
+              </svg>
               <p className="text-fs-base">
                 Uncover hidden market trends and opportunities
               </p>
-              <svg>
-                <path></path>
-              </svg>{" "}
-              <p className="text-fs-base">
-                Make data-driven decisions for successful property transactions
-              </p>
-              <svg>
-                <path></path>
-              </svg>{" "}
-              <p className="text-fs-base">
-                Get personalized support from our dedicated team of experts
-              </p>
-              <button>See more</button>
             </div>
+            <Button className="md:max-w-36">See more</Button>
           </div>
         </div>
       </section>
 
       <section>
-        <h2>Customer Testimonials</h2>
-        <p className="text-fs-md">Read what our clients have to say about us</p>
+        <div className="flex flex-col items-center justify-center space-y-4 pb-12">
+          <h2 className="font-bold">Customer Testimonials</h2>
+          <p className="text-fs-md">
+            Read what our clients have to say about us
+          </p>
+        </div>
 
-        <div>
-          <div className="testimonials_Card">
-            <svg>
-              <path></path>
+        <div className="grid grid-flow-row grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+          <div className="testimonials_Card min-h-max w-full space-y-6 rounded-3xl border border-gray p-8 shadow-sm">
+            <svg
+              className="size-6"
+              viewBox="0 0 32 32"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <g
+                  id="Page-1"
+                  stroke="none"
+                  strokeWidth="1"
+                  fill="none"
+                  fillRule="evenodd"
+                  sketch:type="MSPage"
+                >
+                  <g
+                    className="fill-primary opacity-50"
+                    id="Icon-Set-Filled"
+                    sketch:type="MSLayerGroup"
+                    transform="translate(-154.000000, -881.000000)"
+                  >
+                    <path
+                      d="M186,893.244 L174.962,891.56 L170,881 L165.038,891.56 L154,893.244 L161.985,901.42 L160.095,913 L170,907.53 L179.905,913 L178.015,901.42 L186,893.244"
+                      id="start-favorite"
+                      sketch:type="MSShapeGroup"
+                    ></path>
+                  </g>
+                </g>
+              </g>
             </svg>
             <p className="text-fs-base">
               We had an exceptional experience with this real estate agency, and
               we highly recommend their services to others.
             </p>
-            <div>
-              <img src="" alt="person_id" />
-              <p className="text-fs-base">John Doe </p>
-              <p className="text-fs-base">CEO, ABC Company</p>
+            <div className="flex">
+              <img
+                className="size-12 rounded-full object-cover"
+                src="./images/img.jpg"
+                alt="person_id"
+              />
+              <div className="ml-3 flex flex-col">
+                <p className="text-fs-base font-bold">John Doe </p>
+                <p className="text-fs-base">CEO, ABC Company</p>
+              </div>
             </div>
           </div>
         </div>
@@ -431,7 +492,7 @@ export default function Home() {
               <img src="" alt="article_id" />
             </div>
             <div>
-              <p className="text-fs-sm">March 5, 2024 * </p>{" "}
+              <p className="text-fs-sm">March 5, 2024 * </p>
               <p className="text-fs-sm">5 min read</p>
               <h5>Turning Dreams into Achievable Targets</h5>
               <p className="text-fs-base">
