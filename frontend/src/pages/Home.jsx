@@ -20,19 +20,22 @@ export default function Home() {
             </p>
 
             <form>
-              <div>
+              <div className="flex flex-col md:flex-row items-center relative mr-8">
                 <input
+                  className="min-h-16 min-w-full md:min-w-[24rem] rounded-full py-2 pl-6"
                   type="email"
                   name="email"
                   maxLength="256"
                   placeholder="Enter your email"
                   required
                 ></input>
-                <input
+                <Button
+                  className="md:absolute left-64"
                   type="submit"
                   data-wait="Please wait..."
-                  value="Get started"
-                ></input>
+                >
+                  Get Started
+                </Button>
               </div>
             </form>
           </motion.div>
@@ -333,7 +336,6 @@ export default function Home() {
                   strokeLinejoin="round"
                 ></g>
                 <g id="SVGRepo_iconCarrier">
-                  
                   <rect width="24" height="24" fill="white"></rect>
                   <path
                     className="fill-primary"
@@ -368,10 +370,10 @@ export default function Home() {
               viewBox="0 0 32 32"
               version="1.1"
               xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xmlnsXlink="http://www.w3.org/1999/xlink"
               xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
             >
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
               <g
                 id="SVGRepo_tracerCarrier"
                 strokeLinecap="round"
@@ -420,29 +422,32 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
-        <div>
-          <div>
-            <h2>Subscribe to our newsletter</h2>
+      <section className="hc-Background hc-Background_break">
+        <div className="grid grid-flow-row grid-cols-1 gap-6 lg:grid-cols-2">
+          <div className="flex flex-col justify-center space-y-6">
+            <h2 className="font-bold">Subscribe to our newsletter</h2>
             <p className="text-fs-md">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Suspendisse varius enim in eros elementum tristique.
             </p>
 
             <form>
-              <div>
+              <div className="flex flex-col md:flex-row items-center relative mr-8">
                 <input
+                  className="min-h-16 min-w-full md:min-w-[24rem] rounded-full py-2 pl-6"
                   type="email"
                   name="email"
                   maxLength="256"
                   placeholder="Enter your email"
                   required
                 ></input>
-                <input
+                <Button
+                  className="md:absolute left-64"
                   type="submit"
                   data-wait="Please wait..."
-                  value="Get started"
-                ></input>
+                >
+                  Get Started
+                </Button>
               </div>
             </form>
             <p className="text-fs-xs">
@@ -451,8 +456,12 @@ export default function Home() {
             </p>
           </div>
 
-          <div>
-            <img src="" alt="newsletter_img" />
+          <div className="mt-6">
+            <img
+              className="aspect-[1/2] max-h-[450px] w-full rounded-br-3xl object-cover"
+              src="./images/img.jpg"
+              alt="newsletter_img"
+            />
           </div>
         </div>
       </section>
