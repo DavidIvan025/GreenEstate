@@ -34,3 +34,7 @@
   transform: scale(1.02);
   transition: transform .4s ease-in-out;
 }
+
+.wrapper-Faq{
+  padding: 0 15%;
+}

@@ -466,44 +466,56 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="wrapper-Faq">
-        <h2>Frequently Asked Questions</h2>
-        <p className="text-fs-md">
-          Find answers to commonly asked questions about real estate
-          transactions and using our website.
-        </p>
+      <section>
+        <div className="wrapper-Faq">
+          <div className="flex flex-col items-center space-y-6 mb-12">
 
-        <div>
-          <p className="text-fs-md">How do I search for properties?</p>
-          <p className="text-fs-base">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            varius enim in eros elementum tristique. Duis cursus, mi quis
-            viverra ornare, eros dolor interdum nulla, ut commodo diam libero
-            vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem
-            imperdiet. Nunc ut sem vitae risus tristique posuere.
-          </p>
-        </div>
-        <div>
-          <h4>Still have questions</h4>
-          <p className="text-fs-md">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </p>
-          <button>Contact</button>
+            <h2 className="font-bold">Frequently Asked Questions</h2>
+            <p className="text-fs-md">
+              Find answers to commonly asked questions about real estate
+              transactions and using our website.
+            </p>
+          </div>
+
+          <div className="border-y-2 border-gray py-4">
+            <div className="flex mb-4 items-center cursor-pointer">
+              <p className="text-fs-md font-bold grow">How do I search for properties?</p>
+              <svg className="size-4" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M903.232 256l56.768 50.432L512 768 64 306.432 120.768 256 512 659.072z" fill="#000000"></path></g></svg>
+            </div>
+            <p className="text-fs-base">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+              varius enim in eros elementum tristique. Duis cursus, mi quis
+              viverra ornare, eros dolor interdum nulla, ut commodo diam libero
+              vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem
+              imperdiet. Nunc ut sem vitae risus tristique posuere.
+            </p>
+          </div>
+
+
+          <div className="bg-primary-light rounded-2xl max-w-[35rem] mx-auto flex flex-col items-center justify-center space-y-4 p-6 mt-12 text-center">
+            <h4 className="font-bold">Still have questions</h4>
+            <p className="text-fs-md">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <Button>Contact</Button>
+          </div>
         </div>
       </section>
 
       <section>
-        <h2>Read our latest articles</h2>
-        <button>Browse all articles</button>
-        <div className="article">
-          <div className="article-Card">
-            <div>
-              <img src="" alt="article_id" />
-            </div>
-            <div>
-              <p className="text-fs-sm">March 5, 2024 * </p>
-              <p className="text-fs-sm">5 min read</p>
-              <h5>Turning Dreams into Achievable Targets</h5>
+        <div className="flex flex-col lg:flex-row pb-12">
+          <h2 className="font-bold grow">Read our latest articles</h2>
+          <Button className="max-w-56">Browse all articles</Button>
+        </div>
+        <div className="article grid grid-flow-row grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+          <div className="article-Card relative min-h-[450px] w-full rounded-2xl border border-gray shadow-sm">
+            <img className="object-cover object-center aspect-[1/1] max-w-full rounded-t-2xl" src="./images/img.jpg" alt="article_id" />
+            <div className="p-6 mb-6 space-y-4">
+              <div className="flex space-x-1">
+                <p className="text-fs-sm">March 5, 2024 •</p>
+                <p className="text-fs-sm">5 min read</p>
+              </div>
+              <h5 className="font-bold">Turning Dreams into Achievable Targets</h5>
               <p className="text-fs-base">
                 Discuss how virtual reality is revolutionizing the way potential
                 buyers explore
@@ -514,37 +526,71 @@ export default function Home() {
       </section>
 
       <section>
-        <h2>Get in touch to schedule avisit to our open house</h2>
-        <div>
-          <div className="schedule">
-            <form>
-              <label>Full name</label>
-              <input type="text" name="full_name" id="" />
+        <h2 className="font-bold pb-12">Get in touch to schedule avisit to our open house</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 relative">
+          <div className="schedule bg-primary-light border border-gray shadow-sm rounded-2xl mt-2">
+            <form className="grid grid-cols-2 py-8 px-6 gap-6">
+              <div className="col-span-2 xl:col-start-1 xl:col-end-2">
+                <label>Full name</label>
+                <input className="min-h-12 min-w-full rounded-lg py-2 pl-6" type="text" name="full_name" id="fullName" />
+              </div>
+              <div className="col-span-2 xl:col-start-2 xl:col-end-3">
+                <label>Your Email</label>
+                <input className="min-h-12 min-w-full rounded-lg py-2 pl-6" type="email" name="email" id="email" />
+              </div>
+              <div className="col-span-2">
+                <label>Phone number</label>
+                <input className="min-h-12 min-w-full rounded-lg py-2 pl-6" type="tel" name="tel" id="tel" />
+              </div>
+              <div className="col-span-2">
+                <label>Message</label>
+                <textarea className="min-h-44 min-w-full rounded-lg pl-6 pt-3" name="msg" id="msg" />
+              </div>
 
-              <label>Your Email</label>
-              <input type="email" name="email" id="" />
+              <div className="col-span-2">
+                <Button>Send Message</Button>
+              </div>
 
-              <label>Phone number</label>
-              <input type="tel" name="tel" id="" />
-
-              <label>Message</label>
-              <input type="text" name="msg" id="" />
-
-              <button>Send Message</button>
             </form>
           </div>
-          <div>
-            <div className="contactBox">
-              <div>
-                <svg>
-                  <path></path>
+          <div className="bg-black text-gray rounded-2xl py-28">
+            <div className="contactBox flex border-b-2 border-gray py-4 max-w-lg mx-auto">
+              <div className="bg-gray inline-flex items-center justify-center size-10 rounded-full">
+                <svg
+                  className="size-7 stroke-black"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M12 21C15.5 17.4 19 14.1764 19 10.2C19 6.22355 15.866 3 12 3C8.13401 3 5 6.22355 5 10.2C5 14.1764 8.5 17.4 12 21Z"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    ></path>
+                    <path
+                      d="M12 12C13.1046 12 14 11.1046 14 10C14 8.89543 13.1046 8 12 8C10.8954 8 10 8.89543 10 10C10 11.1046 10.8954 12 12 12Z"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    ></path>
+                  </g>
                 </svg>
               </div>
-              <h6>Our Office Location</h6>
-              <p className="text-fs-base">
-                Al Abraj Street, Al Manara Tower Office 2007 - Dubai - United
-                Arab Emirates
-              </p>
+              <div className="flex-col ml-12">
+                <h6>Our Office Location</h6>
+                <p className="text-fs-base">
+                  Al Abraj Street, Al Manara Tower Office 2007 - Dubai - United
+                  Arab Emirates
+                </p>
+              </div>
             </div>
             <div className="contactBox">
               <div>
