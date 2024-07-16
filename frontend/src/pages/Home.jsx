@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
       <main>
-        <div className="hc-Background grid grid-cols-1 items-center rounded-xl lg:grid-cols-2">
+        <div className="hc-Background--primary grid grid-cols-1 items-center rounded-xl lg:grid-cols-2">
           <motion.div
             className="flex flex-col space-y-6 md:py-28 md:pl-8"
             {...containerMotion}
@@ -20,9 +20,9 @@ export default function Home() {
             </p>
 
             <form>
-              <div className="flex flex-col md:flex-row items-center relative mr-8">
+              <div className="relative mr-8 flex flex-col items-center md:flex-row">
                 <input
-                  className="min-h-16 min-w-full md:min-w-[24rem] rounded-full py-2 pl-6"
+                  className="min-h-16 min-w-full rounded-full py-2 pl-6 md:min-w-[24rem]"
                   type="email"
                   name="email"
                   maxLength="256"
@@ -30,7 +30,7 @@ export default function Home() {
                   required
                 ></input>
                 <Button
-                  className="md:absolute left-64"
+                  className="left-64 md:absolute"
                   type="submit"
                   data-wait="Please wait..."
                 >
@@ -306,7 +306,7 @@ export default function Home() {
 
       <section>
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
-          <div className="hc-Background max-h-[450px] rounded-3xl p-6">
+          <div className="hc-Background--primary max-h-[450px] rounded-3xl p-6">
             <img
               className="size-full rounded-3xl object-cover"
               src="./images/img.jpg"
@@ -422,7 +422,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="hc-Background hc-Background_break">
+      <section className="hc-Background--primary hc-Background--primary_break">
         <div className="grid grid-flow-row grid-cols-1 gap-6 lg:grid-cols-2">
           <div className="flex flex-col justify-center space-y-6">
             <h2 className="font-bold">Subscribe to our newsletter</h2>
@@ -432,9 +432,9 @@ export default function Home() {
             </p>
 
             <form>
-              <div className="flex flex-col md:flex-row items-center relative mr-8">
+              <div className="relative mr-8 flex flex-col items-center md:flex-row">
                 <input
-                  className="min-h-16 min-w-full md:min-w-[24rem] rounded-full py-2 pl-6"
+                  className="min-h-16 min-w-full rounded-full py-2 pl-6 md:min-w-[24rem]"
                   type="email"
                   name="email"
                   maxLength="256"
@@ -442,7 +442,7 @@ export default function Home() {
                   required
                 ></input>
                 <Button
-                  className="md:absolute left-64"
+                  className="left-64 md:absolute"
                   type="submit"
                   data-wait="Please wait..."
                 >
@@ -468,8 +468,7 @@ export default function Home() {
 
       <section>
         <div className="wrapper-Faq">
-          <div className="flex flex-col items-center space-y-6 mb-12">
-
+          <div className="mb-12 flex flex-col items-center space-y-6">
             <h2 className="font-bold">Frequently Asked Questions</h2>
             <p className="text-fs-md">
               Find answers to commonly asked questions about real estate
@@ -478,21 +477,41 @@ export default function Home() {
           </div>
 
           <div className="border-y-2 border-gray py-4">
-            <div className="flex mb-4 items-center cursor-pointer">
-              <p className="text-fs-md font-bold grow">How do I search for properties?</p>
-              <svg className="size-4" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M903.232 256l56.768 50.432L512 768 64 306.432 120.768 256 512 659.072z" fill="#000000"></path></g></svg>
+            <div className="mb-4 flex cursor-pointer items-center">
+              <p className="grow text-fs-md font-bold">
+                How do I search for properties?
+              </p>
+              <svg
+                className="size-4"
+                viewBox="0 0 1024 1024"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="#000000"
+              >
+                <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M903.232 256l56.768 50.432L512 768 64 306.432 120.768 256 512 659.072z"
+                    fill="#000000"
+                  ></path>
+                </g>
+              </svg>
             </div>
             <p className="text-fs-base">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-              varius enim in eros elementum tristique. Duis cursus, mi quis
-              viverra ornare, eros dolor interdum nulla, ut commodo diam libero
-              vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem
-              imperdiet. Nunc ut sem vitae risus tristique posuere.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim in eros elementum tristique. Duis cursus,
+              mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
+              libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum
+              lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
             </p>
           </div>
 
-
-          <div className="bg-primary-light rounded-2xl max-w-[35rem] mx-auto flex flex-col items-center justify-center space-y-4 p-6 mt-12 text-center">
+          <div className="mx-auto mt-12 flex max-w-[35rem] flex-col items-center justify-center space-y-4 rounded-2xl bg-primary-light p-6 text-center">
             <h4 className="font-bold">Still have questions</h4>
             <p className="text-fs-md">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -503,19 +522,25 @@ export default function Home() {
       </section>
 
       <section>
-        <div className="flex flex-col lg:flex-row pb-12">
-          <h2 className="font-bold grow">Read our latest articles</h2>
+        <div className="flex flex-col pb-12 lg:flex-row">
+          <h2 className="grow font-bold">Read our latest articles</h2>
           <Button className="max-w-56">Browse all articles</Button>
         </div>
         <div className="article grid grid-flow-row grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
           <div className="article-Card relative min-h-[450px] w-full rounded-2xl border border-gray shadow-sm">
-            <img className="object-cover object-center aspect-[1/1] max-w-full rounded-t-2xl" src="./images/img.jpg" alt="article_id" />
-            <div className="p-6 mb-6 space-y-4">
+            <img
+              className="aspect-[1/1] max-w-full rounded-t-2xl object-cover object-center"
+              src="./images/img.jpg"
+              alt="article_id"
+            />
+            <div className="mb-6 space-y-4 p-6">
               <div className="flex space-x-1">
                 <p className="text-fs-sm">March 5, 2024 •</p>
                 <p className="text-fs-sm">5 min read</p>
               </div>
-              <h5 className="font-bold">Turning Dreams into Achievable Targets</h5>
+              <h5 className="font-bold">
+                Turning Dreams into Achievable Targets
+              </h5>
               <p className="text-fs-base">
                 Discuss how virtual reality is revolutionizing the way potential
                 buyers explore
@@ -526,36 +551,56 @@ export default function Home() {
       </section>
 
       <section>
-        <h2 className="font-bold pb-12">Get in touch to schedule avisit to our open house</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 relative">
-          <div className="schedule bg-primary-light border border-gray shadow-sm rounded-2xl mt-2">
-            <form className="grid grid-cols-2 py-8 px-6 gap-6">
+        <h2 className="pb-12 font-bold">
+          Get in touch to schedule avisit to our open house
+        </h2>
+        <div className="relative grid grid-cols-1 md:grid-cols-2">
+          <div className="schedule mt-2 rounded-2xl border border-gray bg-primary-light shadow-sm">
+            <form className="grid grid-cols-2 gap-6 px-6 py-8">
               <div className="col-span-2 xl:col-start-1 xl:col-end-2">
                 <label>Full name</label>
-                <input className="min-h-12 min-w-full rounded-lg py-2 pl-6" type="text" name="full_name" id="fullName" />
+                <input
+                  className="min-h-12 min-w-full rounded-lg py-2 pl-6"
+                  type="text"
+                  name="full_name"
+                  id="fullName"
+                />
               </div>
               <div className="col-span-2 xl:col-start-2 xl:col-end-3">
                 <label>Your Email</label>
-                <input className="min-h-12 min-w-full rounded-lg py-2 pl-6" type="email" name="email" id="email" />
+                <input
+                  className="min-h-12 min-w-full rounded-lg py-2 pl-6"
+                  type="email"
+                  name="email"
+                  id="email"
+                />
               </div>
               <div className="col-span-2">
                 <label>Phone number</label>
-                <input className="min-h-12 min-w-full rounded-lg py-2 pl-6" type="tel" name="tel" id="tel" />
+                <input
+                  className="min-h-12 min-w-full rounded-lg py-2 pl-6"
+                  type="tel"
+                  name="tel"
+                  id="tel"
+                />
               </div>
               <div className="col-span-2">
                 <label>Message</label>
-                <textarea className="min-h-44 min-w-full rounded-lg pl-6 pt-3" name="msg" id="msg" />
+                <textarea
+                  className="min-h-44 min-w-full rounded-lg pl-6 pt-3"
+                  name="msg"
+                  id="msg"
+                />
               </div>
 
               <div className="col-span-2">
                 <Button>Send Message</Button>
               </div>
-
             </form>
           </div>
-          <div className="bg-black text-gray rounded-2xl py-28">
-            <div className="contactBox flex border-b-2 border-gray py-4 max-w-lg mx-auto">
-              <div className="bg-gray inline-flex items-center justify-center size-10 rounded-full">
+          <div className="rounded-2xl bg-black py-28 text-gray">
+            <div className="contactBox mx-auto flex max-w-lg border-b-2 border-gray py-4">
+              <div className="inline-flex size-10 items-center justify-center rounded-full bg-gray">
                 <svg
                   className="size-7 stroke-black"
                   viewBox="0 0 24 24"
@@ -584,7 +629,7 @@ export default function Home() {
                   </g>
                 </svg>
               </div>
-              <div className="flex-col ml-12">
+              <div className="ml-12 flex-col">
                 <h6>Our Office Location</h6>
                 <p className="text-fs-base">
                   Al Abraj Street, Al Manara Tower Office 2007 - Dubai - United

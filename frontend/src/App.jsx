@@ -4,6 +4,7 @@ import "react-toastify/dist/ReactToastify.css";
 /* Main Pages */
 import Header from "./layout/Header";
 import Home from "./pages/Home";
+import Footer from "./layout/Footer";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import About from "./pages/About";
@@ -33,6 +34,7 @@ function App() {
             <Route path="/terms-and-conditions" element={<Terms />} />
             <Route path="/cookies" element={<Cookies />} />
           </Routes>
+          <Footer />
         </div>
       </BrowserRouter>
       <ToastContainer />

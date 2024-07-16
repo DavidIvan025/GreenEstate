@@ -1,7 +1,18 @@
-.hc-Background {
+.hc-Background--primary {
   background-image: linear-gradient(
       rgba(55, 219, 49, 0.9),
       rgba(55, 219, 49, 0.9)
+    ),
+    url("images/noise.jpg");
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+}
+
+.hc-Background--secondary {
+  background-image: linear-gradient(
+      rgba(17, 17, 17, 0.9),
+      rgba(17, 17, 17, 0.9)
     ),
     url("images/noise.jpg");
   background-size: cover;
