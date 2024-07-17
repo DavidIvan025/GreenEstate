@@ -14,7 +14,7 @@ export default function Footer() {
           <form>
             <div className="relative mr-8 flex flex-col items-start">
               <input
-                className="min-h-16 min-w-full rounded-full py-2 pl-6 md:min-w-[24rem]"
+                className="my-3 min-h-16 min-w-full rounded-full py-2 pl-6 md:my-0 md:min-w-[24rem]"
                 type="email"
                 name="email"
                 maxLength="256"
@@ -22,7 +22,7 @@ export default function Footer() {
                 required
               ></input>
               <Button
-                className="left-64 md:absolute"
+                className="left-64 top-1 min-w-full md:absolute md:min-w-fit"
                 type="submit"
                 data-wait="Please wait..."
               >
@@ -104,21 +104,21 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col py-8 md:flex-row">
-          <div className="order-2 flex grow flex-col space-y-6 md:order-1 md:flex-row">
+          <div className="order-2 flex grow flex-col gap-6 md:order-1 md:flex-row">
             <p className="order-2 md:order-1">
               © 2024 Created by AirDokan & Powered by Webflow.
             </p>
-            <a className="underline underline-offset-1" href="#">
+            <a className="underline underline-offset-1 md:order-2" href="#">
               Privacy Policy
             </a>
-            <a className="underline underline-offset-1" href="#">
+            <a className="underline underline-offset-1 md:order-3" href="#">
               Terms of Service
             </a>
-            <a className="underline underline-offset-1" href="#">
+            <a className="underline underline-offset-1 md:order-4" href="#">
               Cookies Settings
             </a>
           </div>
-          <div className="order-1 flex space-x-3 md:order-2">
+          <div className="order-1 mb-6 flex space-x-3 md:order-2 md:mb-0">
             <svg
               className="size-7"
               fill="#000000"
