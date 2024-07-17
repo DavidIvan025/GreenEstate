@@ -476,11 +476,11 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="border-y-2 border-gray py-4">
-            <div className="mb-4 flex cursor-pointer items-center">
-              <p className="grow text-fs-md font-bold">
+          <details className="border-y-2 border-gray py-4">
+            <summary className="flex cursor-pointer items-center" open>
+              <div className="grow select-none text-fs-md font-bold">
                 How do I search for properties?
-              </p>
+              </div>
               <svg
                 className="size-4"
                 viewBox="0 0 1024 1024"
@@ -501,15 +501,15 @@ export default function Home() {
                   ></path>
                 </g>
               </svg>
-            </div>
-            <p className="text-fs-base">
+            </summary>
+            <p className="mt-4 text-fs-base">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Suspendisse varius enim in eros elementum tristique. Duis cursus,
               mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
               libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum
               lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
             </p>
-          </div>
+          </details>
 
           <div className="mx-auto mt-12 flex max-w-[35rem] flex-col items-center justify-center space-y-4 rounded-2xl bg-primary-light p-6 text-center">
             <h4 className="font-bold">Still have questions</h4>
@@ -529,7 +529,7 @@ export default function Home() {
         <div className="article grid grid-flow-row grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
           <div className="article-Card relative min-h-[450px] w-full rounded-2xl border border-gray shadow-sm">
             <img
-              className="aspect-[1/1] max-w-full rounded-t-2xl object-cover object-center"
+              className="aspect-[1/1] max-w-full basis-8/12 rounded-t-2xl object-cover object-center"
               src="./images/img.jpg"
               alt="article_id"
             />
