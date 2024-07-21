@@ -103,8 +103,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col py-8 md:flex-row">
-          <div className="order-2 flex grow flex-col gap-6 md:order-1 md:flex-row">
+        <div className="flex flex-col py-8 lg:flex-row">
+          <div className="order-2 flex grow flex-col gap-6 md:flex-row lg:order-1">
             <p className="order-2 md:order-1">
               © 2024 Created by AirDokan & Powered by Webflow.
             </p>
@@ -118,7 +118,7 @@ export default function Footer() {
               Cookies Settings
             </a>
           </div>
-          <div className="order-1 mb-6 flex space-x-3 md:order-2 md:mb-0">
+          <div className="order-1 mb-6 flex space-x-3 lg:order-2 lg:mb-0">
             <svg
               className="size-7"
               fill="#000000"
