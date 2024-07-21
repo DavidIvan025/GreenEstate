@@ -1,92 +1,60 @@
 import React, { useRef, useState } from "react";
 import { cards } from "../services/providers/testData";
 import { motion } from "framer-motion";
+import LuxuryButton from "./ui/LuxuryButton";
 
 export default function LuxurySlideShow() {
-    const containerRef = useRef(null);
-    const [offset, setOffset] = useState(0);
-    const cardWidth = 340; // Adjust this value according to your card width
-    const containerWidth = cards.length * cardWidth;
-  
-    const handlePrevClick = () => {
-      setOffset((prevOffset) => {
-        const newOffset = prevOffset + cardWidth;
-        if (newOffset > 0) {
-          return -containerWidth + cardWidth; // Move to the end
-        }
-        return newOffset;
-      });
-    };
-  
-    const handleNextClick = () => {
-      setOffset((prevOffset) => {
-        const newOffset = prevOffset - cardWidth;
-        if (Math.abs(newOffset) >= containerWidth) {
-          return 0; // Move to the start
-        }
-        return newOffset;
-      });
-    };
+  const containerRef = useRef(null);
+  const [offset, setOffset] = useState(0);
+  const cardWidth = 340; // Adjust this value according to your card width
+  const containerWidth = cards.length * cardWidth;
+
+  const handlePrevClick = () => {
+    setOffset((prevOffset) => {
+      const newOffset = prevOffset + cardWidth;
+      if (newOffset > 0) {
+        return -containerWidth + cardWidth; // Move to the end
+      }
+      return newOffset;
+    });
+  };
+
+  const handleNextClick = () => {
+    setOffset((prevOffset) => {
+      const newOffset = prevOffset - cardWidth;
+      if (Math.abs(newOffset) >= containerWidth) {
+        return 0; // Move to the start
+      }
+      return newOffset;
+    });
+  };
 
   return (
     <>
+      <div className="flex flex-col space-y-6">
+        <span className="font-bold">Luxury</span>
+        <h2>Featured</h2>
+        <div className="flex items-center pb-12">
+          <p className="grow text-fs-md">
+            Discover our curated selection of luxury properties.
+          </p>
+          <div className="hidden md:block">
+            <LuxuryButton direction="left" actionOnClick={handlePrevClick} />
+            <LuxuryButton actionOnClick={handleNextClick} />
+          </div>
+        </div>
+      </div>
       <div className="relative z-10 block translate-y-56 justify-between md:hidden">
-        <button
-          className="cc-Button absolute left-0 -translate-x-8 drop-shadow-sm"
-          onClick={handlePrevClick}
-        >
-          <svg
-            className="size-6 stroke-2"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-            <g
-              id="SVGRepo_tracerCarrier"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            ></g>
-            <g id="SVGRepo_iconCarrier">
-              <path
-                d="M15 7L10 12L15 17"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              ></path>
-            </g>
-          </svg>
-        </button>
-        <button
-          className="cc-Button absolute right-0 translate-x-8 drop-shadow-sm"
-          onClick={handleNextClick}
-        >
-          <svg
-            className="size-6 stroke-2"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-            <g
-              id="SVGRepo_tracerCarrier"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            ></g>
-            <g id="SVGRepo_iconCarrier">
-              <path
-                d="M10 7L15 12L10 17"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              ></path>
-            </g>
-          </svg>
-        </button>
+        <LuxuryButton
+          direction="left"
+          position="left"
+          actionOnClick={handlePrevClick}
+        />
+        <LuxuryButton position="right" actionOnClick={handleNextClick} />
       </div>
 
       <div
-        className="featured-slider relative grid snap-x grid-flow-col gap-12 overflow-y-hidden overflow-x-hidden px-5 py-10"
+        className="featured-slider relative grid snap-x grid-flow-col gap-12 overflow-x-hidden overflow-y-hidden px-5 py-10"
         ref={containerRef}
       >
         <CardList offset={offset} />
@@ -95,7 +63,7 @@ export default function LuxurySlideShow() {
   );
 }
 
-function CardList({offset}) {
+function CardList({ offset }) {
   return (
     <>
       {cards.map((card) => (

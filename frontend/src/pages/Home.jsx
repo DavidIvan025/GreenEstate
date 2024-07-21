@@ -3,7 +3,6 @@ import Button from "../components/ui/Button";
 import { motion } from "framer-motion";
 import { containerMotion } from "../services/providers/componentsMotion";
 import LuxurySlideShow from "../components/LuxurySlideShow";
-import LuxuryButtons from "../components/ui/LuxuryButtons";
 
 export default function Home() {
   return (
@@ -103,18 +102,6 @@ export default function Home() {
       </section>
 
       <section>
-        <div className="flex flex-col space-y-6">
-          <span className="font-bold">Luxury</span>
-          <h2>Featured</h2>
-          <div className="flex items-center pb-12">
-            <p className="grow text-fs-md">
-              Discover our curated selection of luxury properties.
-            </p>
-            <div className="hidden md:block">
-              <LuxuryButtons />
-            </div>
-          </div>
-        </div>
         <LuxurySlideShow />
       </section>
 
