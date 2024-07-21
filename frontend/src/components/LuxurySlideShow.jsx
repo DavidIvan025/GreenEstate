@@ -1,27 +1,32 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { cards } from "../services/providers/testData";
 import { motion } from "framer-motion";
 
 export default function LuxurySlideShow() {
-  const containerRef = useRef(null);
-
-  const handlePrevClick = () => {
-    if (containerRef.current) {
-      containerRef.current.scrollBy({
-        left: -260,
-        behavior: "smooth",
+    const containerRef = useRef(null);
+    const [offset, setOffset] = useState(0);
+    const cardWidth = 340; // Adjust this value according to your card width
+    const containerWidth = cards.length * cardWidth;
+  
+    const handlePrevClick = () => {
+      setOffset((prevOffset) => {
+        const newOffset = prevOffset + cardWidth;
+        if (newOffset > 0) {
+          return -containerWidth + cardWidth; // Move to the end
+        }
+        return newOffset;
       });
-    }
-  };
-
-  const handleNextClick = () => {
-    if (containerRef.current) {
-      containerRef.current.scrollBy({
-        left: 260,
-        behavior: "smooth",
+    };
+  
+    const handleNextClick = () => {
+      setOffset((prevOffset) => {
+        const newOffset = prevOffset - cardWidth;
+        if (Math.abs(newOffset) >= containerWidth) {
+          return 0; // Move to the start
+        }
+        return newOffset;
       });
-    }
-  };
+    };
 
   return (
     <>
@@ -80,22 +85,24 @@ export default function LuxurySlideShow() {
         </button>
       </div>
 
-      <motion.div
-        className="featured-slider relative grid snap-x grid-flow-col gap-12 overflow-y-hidden overflow-x-scroll px-5 py-10"
+      <div
+        className="featured-slider relative grid snap-x grid-flow-col gap-12 overflow-y-hidden overflow-x-hidden px-5 py-10"
         ref={containerRef}
       >
-        <CardList />
-      </motion.div>
+        <CardList offset={offset} />
+      </div>
     </>
   );
 }
 
-function CardList() {
+function CardList({offset}) {
   return (
     <>
       {cards.map((card) => (
-        <div
-          className="featured__card relative min-h-[450px] min-w-[18rem] snap-start rounded-3xl border border-gray p-4 shadow-sm hover:shadow-lg"
+        <motion.div
+          className="featured__card relative min-h-[450px] min-w-[18rem] snap-center rounded-3xl border border-gray p-4 shadow-sm hover:shadow-lg"
+          animate={{ x: offset }}
+          transition={{ duration: 0.5 }}
           key={card.id}
         >
           <img
@@ -204,7 +211,7 @@ function CardList() {
               <p>{card.tags + " "}</p>
             </div>
           </div>
-        </div>
+        </motion.div>
       ))}
     </>
   );
