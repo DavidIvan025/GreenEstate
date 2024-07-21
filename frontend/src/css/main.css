@@ -55,13 +55,23 @@ section {
   padding: clamp(4rem, 5vw + 1rem, 7rem) 0;
 }
 
+.heroWrapper {
+  padding: clamp(4rem, 5vw + 1rem, 7rem) 0 0 0;
+}
+
+main {
+  padding: 0 0 0 clamp(0.5rem, 1vw + 1rem, 2rem);
+}
+
 .navList a {
   cursor: pointer;
 }
+
 .glb-Wrapper {
   min-width: 90%;
   padding: 0 5%;
   margin: 0 auto;
+  overflow-x: clip;
 }
 
 .loadingSpinnerContainer {
@@ -71,7 +81,7 @@ section {
   bottom: 0;
   left: 0;
   background-color: rgba(0.9, 0, 0, 0);
-  z-index: 9000;
+  z-index: 20;
   display: flex;
   justify-content: center;
   align-items: center;
