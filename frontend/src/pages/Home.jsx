@@ -107,11 +107,11 @@ export default function Home() {
 
       <section>
         <span className="font-bold">Our Services</span>
-        <div className="flex items-center py-6">
-          <h2 className="font-bold">
+        <div className="flex flex-col items-center py-6 md:flex-row">
+          <h2 className="mb-4 grow font-bold">
             Explore the myriad ways we can be of assistance.
           </h2>
-          <Button>See more</Button>
+          <Button className="min-w-full md:min-w-fit">See more</Button>
         </div>
         <p>Discover our curated selection of luxury properties.</p>
 
@@ -154,7 +154,9 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col space-y-6 lg:p-4">
-            <h3>Discover the Power of Our Proprietary Market Analysis Tool</h3>
+            <h3 className="font-bold">
+              Discover the Power of Our Proprietary Market Analysis Tool
+            </h3>
             <p className="text-fs-md">
               Gain valuable insights and make informed decisions with our
               advanced market analysis tool. It provides accurate and up-to-date
@@ -308,7 +310,9 @@ export default function Home() {
       <section>
         <div className="wrapper-Faq">
           <div className="mb-12 flex flex-col items-center space-y-6">
-            <h2 className="font-bold">Frequently Asked Questions</h2>
+            <h2 className="text-center font-bold">
+              Frequently Asked Questions
+            </h2>
             <p className="text-fs-md">
               Find answers to commonly asked questions about real estate
               transactions and using our website.
@@ -362,13 +366,15 @@ export default function Home() {
 
       <section>
         <div className="flex flex-col pb-12 lg:flex-row">
-          <h2 className="grow font-bold">Read our latest articles</h2>
-          <Button className="max-w-56">Browse all articles</Button>
+          <h2 className="mb-4 grow font-bold">Read our latest articles</h2>
+          <Button className="min-w-full md:min-w-56">
+            Browse all articles
+          </Button>
         </div>
         <div className="article grid grid-flow-row grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
           <div className="article-Card relative min-h-[450px] w-full rounded-2xl border border-gray shadow-sm">
             <img
-              className="aspect-[1/1] max-w-full basis-8/12 rounded-t-2xl object-cover object-center"
+              className="max-w-full rounded-t-2xl object-cover object-center"
               src="./images/img.jpg"
               alt="article_id"
             />
@@ -393,11 +399,11 @@ export default function Home() {
         <h2 className="pb-24 font-bold">
           Get in touch to schedule avisit to our open house
         </h2>
-        <div className="relative grid grid-flow-row grid-cols-1 md:grid-cols-2">
+        <div className="relative grid grid-flow-row grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1">
           <div className="schedule z-10 overflow-hidden rounded-2xl border border-gray bg-white shadow-lg">
             <form className="grid grid-cols-2 gap-6 px-6 py-8">
               <div className="col-span-2 xl:col-start-1 xl:col-end-2">
-                <label>Full name</label>
+                <label className="font-bold">Full name</label>
                 <input
                   className="min-h-12 min-w-full rounded-lg bg-gray py-2 pl-6"
                   type="text"
@@ -406,7 +412,7 @@ export default function Home() {
                 />
               </div>
               <div className="col-span-2 xl:col-start-2 xl:col-end-3">
-                <label>Your Email</label>
+                <label className="font-bold">Your Email</label>
                 <input
                   className="min-h-12 min-w-full rounded-lg bg-gray py-2 pl-6"
                   type="email"
@@ -415,7 +421,7 @@ export default function Home() {
                 />
               </div>
               <div className="col-span-2">
-                <label>Phone number</label>
+                <label className="font-bold">Phone number</label>
                 <input
                   className="min-h-12 min-w-full rounded-lg bg-gray py-2 pl-6"
                   type="tel"
@@ -424,7 +430,7 @@ export default function Home() {
                 />
               </div>
               <div className="col-span-2">
-                <label>Message</label>
+                <label className="font-bold">Message</label>
                 <textarea
                   className="min-h-44 min-w-full rounded-lg bg-gray pl-6 pt-3"
                   name="msg"
@@ -437,9 +443,9 @@ export default function Home() {
               </div>
             </form>
           </div>
-          <div className="absolute left-1/2 min-h-full min-w-max -translate-x-24 -translate-y-12 rounded-2xl bg-black px-36 py-28 text-gray">
-            <div className="contactBox mx-auto flex max-w-lg border-b-2 border-gray px-28 lg:px-12">
-              <div className="inline-flex size-10 items-center justify-center rounded-full bg-gray">
+          <div className="absolute -left-3 min-h-fit translate-y-[36rem] rounded-2xl bg-black py-28 text-gray md:left-1/2 md:min-h-full md:min-w-max md:-translate-x-24 md:-translate-y-12 md:px-28 lg:px-36">
+            <div className="contactBox mx-auto flex max-w-lg border-b-2 border-gray px-3 md:px-12">
+              <div className="inline-flex size-11 items-center justify-center rounded-full bg-gray p-2">
                 <svg
                   className="size-7 stroke-black"
                   viewBox="0 0 24 24"
@@ -468,8 +474,8 @@ export default function Home() {
                   </g>
                 </svg>
               </div>
-              <div className="mb-3 ml-12 flex-col">
-                <h6>Our Office Location</h6>
+              <div className="mb-3 ml-6 flex-col md:mr-28 lg:mr-14">
+                <h6 className="font-bold">Our Office Location</h6>
                 <p className="text-fs-base">
                   Al Abraj Street, Al Manara Tower Office 2007 - Dubai - United
                   Arab Emirates
