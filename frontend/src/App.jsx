@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import Footer from "./layout/Footer";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import Properties from "./pages/Properties";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Product from "./pages/Product";
@@ -26,6 +27,7 @@ function App() {
             <Route path="/" index element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/properties" element={<Properties />} />
             <Route exact path="/product/:productId" element={<Product />} />
             <Route path="/about" element={<About />} />
             <Route path="/blog" element={<Blog />} />

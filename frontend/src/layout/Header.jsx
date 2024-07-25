@@ -35,7 +35,7 @@ export default function Header() {
         <div className="navList flex items-center">
           <div className="mr-9 space-x-9">
             <Link to="/">Home</Link>
-            <a>Properties</a>
+            <Link to="/properties">Properties</Link>
             <a>Rent</a>
             <a>Sale</a>
             <Link to="/about">About</Link>
