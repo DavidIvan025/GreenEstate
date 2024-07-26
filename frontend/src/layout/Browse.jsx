@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Button from "../components/ui/Button";
 import BrowseButtons from "../components/BrowseButtons";
+import FeaturedCard from "../components/FeaturedCard";
 
 export default function Browse({ title, linkTitle, description }) {
   return (
@@ -25,10 +26,11 @@ export default function Browse({ title, linkTitle, description }) {
         <BrowseButtons />
 
         <div>
-          <div>
-            <div className="flex justify-center">
-              <Button className="min-w-fit">Next</Button>
-            </div>
+          <div className="grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 py-10">
+            <FeaturedCard />
+          </div>
+          <div className="flex items-center justify-center">
+            <Button className="min-w-full md:min-w-fit">Next</Button>
           </div>
         </div>
       </section>
