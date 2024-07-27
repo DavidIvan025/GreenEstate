@@ -21,7 +21,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <div className="glb-Wrapper">
+        <div className="content-grid">
           <Header />
           <Routes>
             <Route path="/" index element={<Home />} />
