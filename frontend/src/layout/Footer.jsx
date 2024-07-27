@@ -4,7 +4,7 @@ import Button from "../components/ui/Button";
 export default function Footer() {
   return (
     <>
-      <footer className="hc-Background--secondary">
+      <footer className="full-width content-grid hc-Background--secondary">
         <div className="flex flex-col py-20 md:flex-row">
           <div className="flex grow flex-col">
             <p className="font-bold">Join our newsletter</p>
