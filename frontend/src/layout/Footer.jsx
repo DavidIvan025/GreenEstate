@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../components/ui/Button";
+import EmailForm from "../components/EmailForm";
 
 export default function Footer() {
   return (
@@ -11,29 +11,7 @@ export default function Footer() {
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           </div>
 
-          <form>
-            <div className="relative mr-8 flex flex-col items-start">
-              <input
-                className="my-3 min-h-16 min-w-full rounded-full py-2 pl-6 md:my-0 md:min-w-[24rem]"
-                type="email"
-                name="email"
-                maxLength="256"
-                placeholder="Enter your email"
-                required
-              ></input>
-              <Button
-                className="left-64 top-1 min-w-full md:absolute md:min-w-fit"
-                type="submit"
-                data-wait="Please wait..."
-              >
-                Get Started
-              </Button>
-              <p className="pt-3 text-fs-xs">
-                By clicking Sign Up you're confirming that you agree with our
-                Terms and Conditions.
-              </p>
-            </div>
-          </form>
+          <EmailForm confirmText={true} />
         </div>
 
         <div className="siteMap grid grid-flow-row grid-cols-1 justify-evenly gap-6 border-b-2 border-b-white pb-20 md:grid-cols-3 lg:grid-cols-6">
