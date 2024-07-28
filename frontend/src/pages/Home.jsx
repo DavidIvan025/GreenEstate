@@ -3,6 +3,7 @@ import Button from "../components/ui/Button";
 import { motion } from "framer-motion";
 import { containerMotion } from "../services/providers/componentsMotion";
 import LuxurySlideShow from "../components/LuxurySlideShow";
+import EmailForm from "../components/EmailForm";
 
 export default function Home() {
   return (
@@ -20,25 +21,7 @@ export default function Home() {
               Suspendisse varius enim in eros elementum tristique.
             </p>
 
-            <form>
-              <div className="relative mr-8 flex flex-col items-center md:flex-row">
-                <input
-                  className="min-h-16 min-w-full rounded-full py-2 pl-6 md:min-w-[24rem]"
-                  type="email"
-                  name="email"
-                  maxLength="256"
-                  placeholder="Enter your email"
-                  required
-                ></input>
-                <Button
-                  className="left-64 mt-3 min-w-full md:absolute md:mt-0 md:min-w-fit"
-                  type="submit"
-                  data-wait="Please wait..."
-                >
-                  Get Started
-                </Button>
-              </div>
-            </form>
+            <EmailForm confirmText={false} />
           </motion.div>
 
           <div>
@@ -263,7 +246,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="hc-Background--primary hc-Background--primary_break">
+      <section className="full-width hc-Background--primary hc-Background--primary_break">
         <div className="grid grid-flow-row grid-cols-1 gap-6 lg:grid-cols-2">
           <div className="flex flex-col justify-center space-y-6">
             <h2 className="font-bold">Subscribe to our newsletter</h2>
@@ -272,29 +255,7 @@ export default function Home() {
               Suspendisse varius enim in eros elementum tristique.
             </p>
 
-            <form>
-              <div className="relative mr-8 flex flex-col items-center md:flex-row">
-                <input
-                  className="min-h-16 min-w-full rounded-full py-2 pl-6 md:min-w-[24rem]"
-                  type="email"
-                  name="email"
-                  maxLength="256"
-                  placeholder="Enter your email"
-                  required
-                ></input>
-                <Button
-                  className="left-64 md:absolute"
-                  type="submit"
-                  data-wait="Please wait..."
-                >
-                  Get Started
-                </Button>
-              </div>
-            </form>
-            <p className="text-fs-xs">
-              By clicking Sign Up you're confirming that you agree with our
-              Terms and Conditions.
-            </p>
+            <EmailForm confirmText={true} />
           </div>
 
           <div className="mt-6">
@@ -399,7 +360,7 @@ export default function Home() {
         <h2 className="pb-24 font-bold">
           Get in touch to schedule avisit to our open house
         </h2>
-        <div className="relative grid grid-flow-row grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1">
+        <div className="grid grid-flow-row grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1">
           <div className="schedule z-10 overflow-hidden rounded-2xl border border-gray bg-white shadow-lg">
             <form className="grid grid-cols-2 gap-6 px-6 py-8">
               <div className="col-span-2 xl:col-start-1 xl:col-end-2">
@@ -443,8 +404,8 @@ export default function Home() {
               </div>
             </form>
           </div>
-          <div className="absolute -left-3 min-h-fit translate-y-[36rem] rounded-2xl bg-black py-28 text-gray md:left-1/2 md:min-h-full md:min-w-max md:-translate-x-24 md:-translate-y-12 md:px-28 lg:px-36">
-            <div className="contactBox mx-auto flex max-w-lg border-b-2 border-gray px-3 md:px-12">
+          <div className="lg:px-18 relative min-h-fit py-28 text-gray md:min-h-full md:px-9">
+            <div className="mx-auto flex max-w-lg border-b-2 border-gray before:absolute before:bottom-0 before:left-[-2.5rem] before:right-[-2.5rem] before:top-0 before:-z-10 before:translate-y-[-2rem] before:rounded-2xl before:bg-black">
               <div className="inline-flex size-11 items-center justify-center rounded-full bg-gray p-2">
                 <svg
                   className="size-7 stroke-black"
@@ -474,7 +435,7 @@ export default function Home() {
                   </g>
                 </svg>
               </div>
-              <div className="mb-3 ml-6 flex-col md:mr-28 lg:mr-14">
+              <div className="mb-3 ml-6 flex-col lg:mr-14">
                 <h6 className="font-bold">Our Office Location</h6>
                 <p className="text-fs-base">
                   Al Abraj Street, Al Manara Tower Office 2007 - Dubai - United
