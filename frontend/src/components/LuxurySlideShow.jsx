@@ -54,7 +54,7 @@ export default function LuxurySlideShow() {
       </div>
 
       <div
-        className="featured-slider relative grid snap-x grid-flow-col gap-12 overflow-x-hidden overflow-y-hidden px-5 py-10"
+        className="featured-slider relative grid snap-x grid-flow-col gap-12 px-5 py-10"
         ref={containerRef}
       >
         <CardList offset={offset} />

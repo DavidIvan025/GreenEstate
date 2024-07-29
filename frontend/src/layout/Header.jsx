@@ -15,9 +15,9 @@ export default function Header() {
   };
 
   return (
-    <header className="flex justify-between">
-      <div className="">
-        <svg className="inline-flex h-9 max-w-48">
+    <header>
+      <div className="inline-flex items-center justify-center">
+        <svg className="h-9 max-w-48">
           <path
             d="M0.5 31.7372V17.7234C0.5 17.5651 0.556633 17.412 0.659664 17.2918L7.00394 9.89018C7.25304 9.59957 7.69574 9.57956 7.97004 9.84651L24.8459 26.2703C25.2749 26.6878 25.9937 26.3682 25.9712 25.77L25.712 18.901C25.7056 18.7325 25.6353 18.5728 25.5153 18.4543L12.4151 5.51182C12.1534 5.25329 12.1521 4.83118 12.4122 4.57107L16.1188 0.864442C16.3759 0.607367 16.792 0.605177 17.0518 0.859532L32.3008 15.7908C32.4282 15.9156 32.5 16.0864 32.5 16.2647V31.7372C32.5 32.1035 32.2031 32.4004 31.8368 32.4004H21.6614C21.4882 32.4004 21.3218 32.3326 21.1979 32.2115L7.92727 19.2425C7.50732 18.8321 6.80052 19.1296 6.80052 19.7168V26.8081C6.80052 26.991 6.87602 27.1658 7.00919 27.2911L11.22 31.2542C11.6574 31.6659 11.3661 32.4004 10.7655 32.4004H1.16321C0.79693 32.4004 0.5 32.1035 0.5 31.7372Z"
             fill="#078939"
@@ -31,9 +31,9 @@ export default function Header() {
         </svg>
       </div>
 
-      <nav role="navigation" className="hidden lg:block">
+      <nav role="navigation" className="flex-1">
         <div className="navList flex items-center">
-          <div className="mr-9 space-x-9">
+          <div className="mr-9 hidden space-x-9 lg:block">
             <Link to="/">Home</Link>
             <Link to="/properties">Properties</Link>
             <a>Rent</a>
@@ -41,56 +41,55 @@ export default function Header() {
             <Link to="/about">About</Link>
           </div>
 
-          <div className="flex">
-            <a>Pages</a>
-            <svg
-              className="h-6 w-6"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-              <g
-                id="SVGRepo_tracerCarrier"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              ></g>
-              <g id="SVGRepo_iconCarrier">
-                <path
-                  d="M18.2929 15.2893C18.6834 14.8988 18.6834 14.2656 18.2929 13.8751L13.4007 8.98766C12.6195 8.20726 11.3537 8.20757 10.5729 8.98835L5.68257 13.8787C5.29205 14.2692 5.29205 14.9024 5.68257 15.2929C6.0731 15.6835 6.70626 15.6835 7.09679 15.2929L11.2824 11.1073C11.673 10.7168 12.3061 10.7168 12.6966 11.1073L16.8787 15.2893C17.2692 15.6798 17.9024 15.6798 18.2929 15.2893Z"
-                  fill="#0F0F0F"
-                ></path>
-              </g>
-            </svg>
-            <a className="mx-4 block">Cart()</a>
+          <div className="flex flex-1">
+            <div className="pagesOpen hidden items-center lg:block">
+              <a>Pages</a>
+              <svg
+                className="ml-2 inline-flex size-5"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M18.2929 15.2893C18.6834 14.8988 18.6834 14.2656 18.2929 13.8751L13.4007 8.98766C12.6195 8.20726 11.3537 8.20757 10.5729 8.98835L5.68257 13.8787C5.29205 14.2692 5.29205 14.9024 5.68257 15.2929C6.0731 15.6835 6.70626 15.6835 7.09679 15.2929L11.2824 11.1073C11.673 10.7168 12.3061 10.7168 12.6966 11.1073L16.8787 15.2893C17.2692 15.6798 17.9024 15.6798 18.2929 15.2893Z"
+                    fill="#0F0F0F"
+                  ></path>
+                </g>
+              </svg>
+            </div>
+            <a className="ml-auto block lg:mx-4">Cart(3)</a>
           </div>
 
-          <div className="flex justify-end space-x-4">
-            {user ? (
-              <Button
-                intent="secondary"
-                className="text-nowrap"
-                onClick={logoutFn}
-              >
-                {" "}
-                Sign out
-              </Button>
-            ) : (
-              <>
-                <Link to="/login">
-                  <Button intent="secondary" className="text-nowrap">
-                    {" "}
-                    Sign in
-                  </Button>
-                </Link>
-                <Link to="/register">
-                  <Button intent="secondary"> Register</Button>
-                </Link>
-              </>
-            )}
-            <Link to="/contact" className="hidden xl:block">
-              <Button> Contact us</Button>
-            </Link>
+          <div className="hidden lg:block">
+            <div className="flex justify-end space-x-4">
+              {user ? (
+                <Button
+                  intent="secondary"
+                  className="text-nowrap"
+                  onClick={logoutFn}
+                >
+                  Sign out
+                </Button>
+              ) : (
+                <>
+                  <Link to="/login">
+                    <Button intent="secondary" className="text-nowrap">
+                      Sign in
+                    </Button>
+                  </Link>
+                </>
+              )}
+              <Link to="/contact" className="hidden xl:block">
+                <Button> Contact us</Button>
+              </Link>
+            </div>
           </div>
         </div>
       </nav>
