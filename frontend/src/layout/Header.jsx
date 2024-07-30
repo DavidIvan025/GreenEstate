@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { logout, reset } from "../services/state/auth/authSlice";
 import Button from "../components/ui/Button";
+import BurgerMenu from "../components/ui/BurgerMenu";
 
 export default function Header() {
   const navigate = useNavigate();
@@ -41,11 +42,11 @@ export default function Header() {
             <Link to="/about">About</Link>
           </div>
 
-          <div className="flex flex-1">
+          <div className="flex flex-1 gap-x-2">
             <div className="pagesOpen hidden items-center lg:block">
               <a>Pages</a>
               <svg
-                className="ml-2 inline-flex size-5"
+                className="inline-flex size-5"
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -65,6 +66,9 @@ export default function Header() {
               </svg>
             </div>
             <a className="ml-auto block lg:mx-4">Cart(3)</a>
+            <div className="block lg:hidden">
+              <BurgerMenu />
+            </div>
           </div>
 
           <div className="hidden lg:block">
