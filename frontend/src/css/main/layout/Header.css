@@ -10,3 +10,28 @@ header {
 .pagesOpen:hover > svg {
   transform: rotate(180deg);
 }
+
+.bMenu > div {
+  min-height: 0.25rem;
+  min-width: 100%;
+  border-radius: 1.5rem;
+  background-color: var(--black);
+}
+
+.bMenu > div.bar1,
+.bMenu > div.bar2,
+.bMenu > div.bar3 {
+  transition: transform 150ms linear, min-width 125ms linear;
+}
+
+.bMenu:hover > div.bar2 {
+  min-width: 0;
+}
+
+.bMenu:hover > div.bar1 {
+  transform: rotate(45deg) translate(0.6rem, 0.5rem);
+}
+
+.bMenu:hover > div.bar3 {
+  transform: rotate(-45deg) translate(0.5rem, -0.5rem);
+}
