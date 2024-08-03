@@ -11,6 +11,7 @@ const button = cva("button", {
         "ease-in",
         "duration-300",
         "hover:bg-black",
+        "disabled:bg-primary-light",
       ],
       secondary: [
         "bg-white",
