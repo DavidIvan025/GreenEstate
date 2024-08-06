@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import { containerMotion } from "../services/providers/componentsMotion";
 import LuxurySlideShow from "../components/LuxurySlideShow";
 import EmailForm from "../components/EmailForm";
+import FAQ from "../components/FAQ";
+import Testimonials from "../components/Testimonials";
 
 export default function Home() {
   return (
@@ -180,70 +182,7 @@ export default function Home() {
       </section>
 
       <section>
-        <div className="flex flex-col items-center justify-center space-y-4 pb-12">
-          <h2 className="font-bold">Customer Testimonials</h2>
-          <p className="text-fs-md">
-            Read what our clients have to say about us
-          </p>
-        </div>
-
-        <div className="grid grid-flow-row grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
-          <div className="testimonials_Card min-h-max w-full space-y-6 rounded-3xl border border-gray p-8 shadow-sm">
-            <svg
-              className="size-6"
-              viewBox="0 0 32 32"
-              version="1.1"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlnsXlink="http://www.w3.org/1999/xlink"
-              xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
-            >
-              <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-              <g
-                id="SVGRepo_tracerCarrier"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              ></g>
-              <g id="SVGRepo_iconCarrier">
-                <g
-                  id="Page-1"
-                  stroke="none"
-                  strokeWidth="1"
-                  fill="none"
-                  fillRule="evenodd"
-                  sketch:type="MSPage"
-                >
-                  <g
-                    className="fill-primary opacity-50"
-                    id="Icon-Set-Filled"
-                    sketch:type="MSLayerGroup"
-                    transform="translate(-154.000000, -881.000000)"
-                  >
-                    <path
-                      d="M186,893.244 L174.962,891.56 L170,881 L165.038,891.56 L154,893.244 L161.985,901.42 L160.095,913 L170,907.53 L179.905,913 L178.015,901.42 L186,893.244"
-                      id="start-favorite"
-                      sketch:type="MSShapeGroup"
-                    ></path>
-                  </g>
-                </g>
-              </g>
-            </svg>
-            <p className="text-fs-base">
-              We had an exceptional experience with this real estate agency, and
-              we highly recommend their services to others.
-            </p>
-            <div className="flex">
-              <img
-                className="size-12 rounded-full object-cover"
-                src="./images/img.jpg"
-                alt="person_id"
-              />
-              <div className="ml-3 flex flex-col">
-                <p className="text-fs-base font-bold">John Doe </p>
-                <p className="text-fs-base">CEO, ABC Company</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <Testimonials />
       </section>
 
       <section className="full-width hc-Background--primary hc-Background--primary_break">
@@ -269,60 +208,7 @@ export default function Home() {
       </section>
 
       <section>
-        <div className="wrapper-Faq">
-          <div className="mb-12 flex flex-col items-center space-y-6">
-            <h2 className="text-center font-bold">
-              Frequently Asked Questions
-            </h2>
-            <p className="text-fs-md">
-              Find answers to commonly asked questions about real estate
-              transactions and using our website.
-            </p>
-          </div>
-
-          <details className="border-y-2 border-gray py-4">
-            <summary className="flex cursor-pointer items-center" open>
-              <div className="grow select-none text-fs-md font-bold">
-                How do I search for properties?
-              </div>
-              <svg
-                className="size-4"
-                viewBox="0 0 1024 1024"
-                version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="#000000"
-              >
-                <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-                <g
-                  id="SVGRepo_tracerCarrier"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                ></g>
-                <g id="SVGRepo_iconCarrier">
-                  <path
-                    d="M903.232 256l56.768 50.432L512 768 64 306.432 120.768 256 512 659.072z"
-                    fill="#000000"
-                  ></path>
-                </g>
-              </svg>
-            </summary>
-            <p className="mt-4 text-fs-base">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse varius enim in eros elementum tristique. Duis cursus,
-              mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
-              libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum
-              lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
-            </p>
-          </details>
-
-          <div className="mx-auto mt-12 flex max-w-[35rem] flex-col items-center justify-center space-y-4 rounded-2xl bg-primary-light p-6 text-center">
-            <h4 className="font-bold">Still have questions</h4>
-            <p className="text-fs-md">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
-            <Button>Contact</Button>
-          </div>
-        </div>
+        <FAQ />
       </section>
 
       <section>
