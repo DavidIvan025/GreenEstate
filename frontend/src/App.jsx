@@ -8,6 +8,8 @@ import Footer from "./layout/Footer";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Properties from "./pages/Properties";
+import Rent from "./pages/Rent";
+import Sell from "./pages/Sell";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Product from "./pages/Product";
@@ -28,6 +30,8 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/properties" element={<Properties />} />
+            <Route path="/rent" element={<Rent />} />
+            <Route path="/sell" element={<Sell />} />
             <Route exact path="/product/:productId" element={<Product />} />
             <Route path="/about" element={<About />} />
             <Route path="/blog" element={<Blog />} />

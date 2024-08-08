@@ -182,7 +182,7 @@ export default function About() {
             <div className="mt-6 grid grid-cols-1 gap-3">
               <div className="grid grid-cols-[4rem,1fr]">
                 <div className="justify-self-center" ref={ref}>
-                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-primary-light text-fs-lg font-bold text-white">
+                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-primary text-fs-lg font-bold text-white">
                     1
                   </div>
                   <div className="relative ml-6 mt-2 flex min-h-20 w-[2px] bg-primary-light">
