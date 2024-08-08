@@ -37,8 +37,8 @@ export default function Header() {
           <div className="mr-9 hidden space-x-9 lg:block">
             <Link to="/">Home</Link>
             <Link to="/properties">Properties</Link>
-            <a>Rent</a>
-            <a>Sale</a>
+            <Link to="/rent">Rent</Link>
+            <Link to="/sell">Sale</Link>
             <Link to="/about">About</Link>
           </div>
 
