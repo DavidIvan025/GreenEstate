@@ -1,11 +1,11 @@
 import React from "react";
 import Utility from "../../layout/Utility";
 
-export default function TermsAndConditions() {
+export default function PrivacyPolicy() {
   return (
     <Utility
-      title="Terms and Conditions"
-      linkTitle="Terms and Conditions"
+      title="Privacy Policy"
+      linkTitle="Privacy Policy"
       paragraph={[
         "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae expedita neque, obcaecati repellendus, illum incidunt hic odit reiciendis autem eum qui, fugiat veniam inventore laudantium debitis explicabo? Illo, animi repellendus!",
         "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae expedita neque, obcaecati repellendus, illum incidunt hic odit reiciendis autem eum qui, fugiat veniam inventore laudantium debitis explicabo? Illo, animi repellendus!",

@@ -16,6 +16,7 @@ import Product from "./pages/Product";
 import Blog from "./pages/Blog";
 /* Utility Pages */
 import Demo from "./pages/utility_pages/Demo";
+import Privacy from "./pages/utility_pages/PrivacyPolicy";
 import Terms from "./pages/utility_pages/TermsAndConditions";
 import Cookies from "./pages/utility_pages/CookieSetting";
 
@@ -37,6 +38,7 @@ function App() {
             <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/demo" element={<Demo />} />
+            <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms-and-conditions" element={<Terms />} />
             <Route path="/cookies" element={<Cookies />} />
           </Routes>

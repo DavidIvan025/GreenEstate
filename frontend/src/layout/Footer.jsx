@@ -1,5 +1,6 @@
 import React from "react";
 import EmailForm from "../components/EmailForm";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -74,9 +75,15 @@ export default function Footer() {
               <li>404 Not Found</li>
               <li>Protected Password</li>
               <li>Changelog</li>
-              <li>Terms and Conditions</li>
-              <li>Privacy Policy</li>
-              <li>Licenses</li>
+              <li>
+                <Link to="/terms-and-conditions">Terms and Conditions</Link>
+              </li>
+              <li>
+                <Link to="/privacy">Privacy Policy</Link>
+              </li>
+              <li>
+                <Link to="/cookies">Cookie Setting</Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -86,15 +93,24 @@ export default function Footer() {
             <p className="order-2 md:order-1">
               © 2024 Created by AirDokan & Powered by Webflow.
             </p>
-            <a className="underline underline-offset-1 md:order-2" href="#">
+            <Link
+              className="underline underline-offset-1 md:order-2"
+              to="/privacy"
+            >
               Privacy Policy
-            </a>
-            <a className="underline underline-offset-1 md:order-3" href="#">
+            </Link>
+            <Link
+              className="underline underline-offset-1 md:order-3"
+              to="/terms-and-conditions"
+            >
               Terms of Service
-            </a>
-            <a className="underline underline-offset-1 md:order-4" href="#">
+            </Link>
+            <Link
+              className="underline underline-offset-1 md:order-4"
+              to="/cookies"
+            >
               Cookies Settings
-            </a>
+            </Link>
           </div>
           <div className="order-1 mb-6 flex space-x-3 lg:order-2 lg:mb-0">
             <svg
