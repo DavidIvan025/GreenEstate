@@ -9,6 +9,7 @@
 
 /* Page Styles */
 @import "main/pages/Home.css";
+@import "main/pages/utility_pages/Demo.css";
 
 html {
   font-size: 1rem;
