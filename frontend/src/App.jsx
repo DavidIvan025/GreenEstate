@@ -12,6 +12,7 @@ import Rent from "./pages/Rent";
 import Sell from "./pages/Sell";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Shop from "./pages/Shop";
 import Product from "./pages/Product";
 import Blog from "./pages/Blog";
 /* Utility Pages */
@@ -33,6 +34,7 @@ function App() {
             <Route path="/properties" element={<Properties />} />
             <Route path="/rent" element={<Rent />} />
             <Route path="/sell" element={<Sell />} />
+            <Route path="/shop" element={<Shop />} />
             <Route exact path="/product/:productId" element={<Product />} />
             <Route path="/about" element={<About />} />
             <Route path="/blog" element={<Blog />} />
