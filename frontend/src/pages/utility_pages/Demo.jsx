@@ -24,7 +24,7 @@ export default function Demo() {
               ullamcorper sed pharetra senectus donec nunc.
             </p>
 
-            <div className="mt-8 mb-12 grid grid-flow-row grid-cols-[1.5rem,1fr] gap-4">
+            <div className="mb-12 mt-8 grid grid-flow-row grid-cols-[1.5rem,1fr] gap-4">
               <svg
                 className="size-5 fill-primary"
                 viewBox="0 0 24 24"
@@ -180,9 +180,7 @@ export default function Demo() {
                   </label>
                 </div>
 
-                <Button className="w-auto md:max-w-fit">
-                  Submit
-                </Button>
+                <Button className="w-auto md:max-w-fit">Submit</Button>
               </div>
             </form>
           </div>

@@ -90,7 +90,7 @@ export default function Home() {
         <LuxurySlideShow />
       </section>
 
-      <section>
+      <section className="full-width bg-[#F7FCF9]">
         <span className="font-bold">Our Services</span>
         <div className="flex flex-col items-center py-6 md:flex-row">
           <h2 className="mb-4 grow font-bold">
@@ -101,7 +101,7 @@ export default function Home() {
         <p>Discover our curated selection of luxury properties.</p>
 
         <div className="services-list grid grid-flow-row grid-cols-1 gap-12 pt-12 md:grid-cols-2 lg:grid-cols-3">
-          <div className="services__card min-h-[450px] w-full space-y-6 border border-gray p-8 shadow-md hover:border-b-4 hover:border-b-primary hover:transition-all hover:ease-linear">
+          <div className="services__card min-h-[450px] w-full space-y-6 border border-gray bg-white p-8 shadow-md hover:border-b-4 hover:border-b-primary hover:transition-all hover:ease-linear">
             <span className="text-fs-base">01</span>
             <h4 className="font-bold">Buy Properties</h4>
             <p className="text-fs-base">
@@ -181,13 +181,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
+      <section className="full-width bg-[#F7FCF9]">
         <Testimonials />
       </section>
 
-      <section className="full-width hc-Background--primary hc-Background--primary_break">
+      <section className="full-width hc-Background--primary noPaddingSection">
         <div className="grid grid-flow-row grid-cols-1 gap-6 lg:grid-cols-2">
-          <div className="flex flex-col justify-center space-y-6">
+          <div className="flex flex-col justify-center space-y-6 py-28">
             <h2 className="font-bold">Subscribe to our newsletter</h2>
             <p className="text-fs-md">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -197,7 +197,7 @@ export default function Home() {
             <EmailForm confirmText={true} />
           </div>
 
-          <div className="mt-6">
+          <div className="mt-6 place-content-end">
             <img
               className="aspect-[1/2] max-h-[450px] w-full rounded-br-3xl object-cover"
               src="./images/img.jpg"
@@ -242,7 +242,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
+      <section className="full-width z-20 bg-[#F7FCF9]">
         <h2 className="pb-24 font-bold">
           Get in touch to schedule avisit to our open house
         </h2>
@@ -252,36 +252,40 @@ export default function Home() {
               <div className="col-span-2 xl:col-start-1 xl:col-end-2">
                 <label className="font-bold">Full name</label>
                 <input
-                  className="min-h-12 min-w-full rounded-lg bg-gray py-2 pl-6"
+                  className="min-h-12 min-w-full rounded-lg border border-gray bg-white py-2 pl-6 text-fs-sm"
                   type="text"
                   name="fullName"
                   id="fullName"
+                  placeholder="Full name"
                 />
               </div>
               <div className="col-span-2 xl:col-start-2 xl:col-end-3">
                 <label className="font-bold">Your Email</label>
                 <input
-                  className="min-h-12 min-w-full rounded-lg bg-gray py-2 pl-6"
+                  className="min-h-12 min-w-full rounded-lg border border-gray bg-white py-2 pl-6 text-fs-sm"
                   type="email"
                   name="email"
                   id="email"
+                  placeholder="example@email.com"
                 />
               </div>
               <div className="col-span-2">
                 <label className="font-bold">Phone number</label>
                 <input
-                  className="min-h-12 min-w-full rounded-lg bg-gray py-2 pl-6"
+                  className="min-h-12 min-w-full rounded-lg border border-gray bg-white py-2 pl-6 text-fs-sm"
                   type="tel"
                   name="tel"
                   id="tel"
+                  placeholder="123 4567"
                 />
               </div>
               <div className="col-span-2">
                 <label className="font-bold">Message</label>
                 <textarea
-                  className="min-h-44 min-w-full rounded-lg bg-gray pl-6 pt-3"
+                  className="min-h-44 min-w-full rounded-lg border border-gray bg-white pl-6 pt-3 text-fs-sm"
                   name="msg"
                   id="msg"
+                  placeholder="Type your message..."
                 />
               </div>
 

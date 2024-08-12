@@ -9,7 +9,7 @@ export default function Testimonials() {
       </div>
 
       <div className="grid grid-flow-row grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
-        <div className="testimonials_Card min-h-max w-full space-y-6 rounded-3xl border border-gray p-8 shadow-sm">
+        <div className="min-h-max w-full space-y-6 rounded-3xl border border-gray bg-white p-8 shadow-sm">
           <svg
             className="size-6"
             viewBox="0 0 32 32"

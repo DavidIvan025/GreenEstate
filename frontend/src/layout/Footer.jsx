@@ -31,9 +31,13 @@ export default function Footer() {
           <div>
             <p className="font-bold">Page</p>
             <ul>
-              <li>Home v1</li>
+              <li>
+                <Link to="/">Home v1</Link>
+              </li>
               <li>Home v2</li>
-              <li>Properties</li>
+              <li>
+                <Link to="/properties">Properties</Link>
+              </li>
               <li>Properties Single</li>
               <li>New listing</li>
             </ul>
@@ -45,26 +49,42 @@ export default function Footer() {
               <li>Land</li>
               <li>Construction</li>
               <li>Shared ownership</li>
-              <li>Rent</li>
+              <li>
+                <Link to="/rent">Rent</Link>
+              </li>
             </ul>
           </div>
           <div>
             <p className="font-bold">Page</p>
             <ul>
-              <li>Sell</li>
-              <li>About Us</li>
+              <li>
+                <Link to="/sell">Sell</Link>
+              </li>
+              <li>
+                <Link to="/about">About Us</Link>
+              </li>
               <li>Agent (CMS)</li>
-              <li>Blog</li>
+              <li>
+                <Link to="/blog">Blog</Link>
+              </li>
               <li>Blog Post</li>
             </ul>
           </div>
           <div>
             <p className="font-bold">Page</p>
             <ul>
-              <li>Product/Shop</li>
-              <li>Contact Us</li>
-              <li>Sign In</li>
-              <li>Sign Up</li>
+              <li>
+                <Link to="/shop">Shop/Products</Link>
+              </li>
+              <li>
+                <Link to="/contact">Contact Us</Link>
+              </li>
+              <li>
+                <Link to="/login">Sign In</Link>
+              </li>
+              <li>
+                <Link to="/register">Sign Up</Link>
+              </li>
               <li>
                 <Link to="/demo">Demo</Link>
               </li>
