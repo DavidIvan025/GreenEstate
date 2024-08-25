@@ -15,6 +15,7 @@ import Contact from "./pages/Contact";
 import Shop from "./pages/Shop";
 import Product from "./pages/Product";
 import Blog from "./pages/Blog";
+import Agent from "./pages/Agent";
 /* Utility Pages */
 import Demo from "./pages/utility_pages/Demo";
 import Privacy from "./pages/utility_pages/PrivacyPolicy";
@@ -38,6 +39,7 @@ function App() {
             <Route exact path="/product/:productId" element={<Product />} />
             <Route path="/about" element={<About />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/agent" element={<Agent />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/demo" element={<Demo />} />
             <Route path="/privacy" element={<Privacy />} />
